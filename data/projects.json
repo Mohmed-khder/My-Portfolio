@@ -1,0 +1,451 @@
+[
+    {
+        "id": "21",
+        "title": "Rehltna-Travel",
+        "image": "assets\/img\/projects\/1778629493_rehltna.png",
+        "category": "category4",
+        "technologies": [
+            "React",
+            "Next.js",
+            "Tailwind",
+            "PHP",
+            "JavaScript"
+        ],
+        "techColors": [
+            "#60d8f1",
+            "#000000",
+            "#39bcf9",
+            "#7377ad",
+            "#fed600"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/www.rehltna.com\/ar",
+        "isActive": true,
+        "isFeatured": false
+    },
+    {
+        "id": "1",
+        "title": "Flanka E-Commerce",
+        "image": "assets\/img\/projects\/flanka.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            "php",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#7377ad",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/site36535-aeutcg.scloudsite101.com\/"
+    },
+    {
+        "id": "2",
+        "title": "Kmena Website",
+        "image": "assets\/img\/projects\/kmena.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            "php",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#7377ad",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/k-mena.com\/"
+    },
+    {
+        "id": "3",
+        "title": "Alpha Prime Events",
+        "image": "assets\/img\/projects\/ALPHA2.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            "php",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#7377ad",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/site69104-2d52bz.scloudsite101.com"
+    },
+    {
+        "id": "4",
+        "title": "kns Orgnization",
+        "image": "assets\/img\/projects\/kns.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            "php",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#7377ad",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/newwebsite.kuwaitneuro.org"
+    },
+    {
+        "id": "5",
+        "title": "Mediaf Restaurant",
+        "image": "assets\/img\/projects\/mediaf2.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            "php",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#7377ad",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/medyafalsharq.com\/"
+    },
+    {
+        "id": "6",
+        "title": "NileTours Company",
+        "image": "assets\/img\/projects\/mile-tours.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            ".net",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#4e2acd",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/niletours.co"
+    },
+    {
+        "id": "7",
+        "title": "GeoDuke Company",
+        "image": "assets\/img\/projects\/geoduke.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            ".net",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#4e2acd",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/geoduke.com"
+    },
+    {
+        "id": "8",
+        "title": "EcoSyst Company",
+        "image": "assets\/img\/projects\/EcoComapny.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            ".net",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#4e2acd",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "http:\/\/ecosyst-website.netlify.app"
+    },
+    {
+        "id": "9",
+        "title": "Arkan Website",
+        "image": "assets\/img\/projects\/Arkan.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            ".net",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#4e2acd",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/arkann.netlify.app"
+    },
+    {
+        "id": "10",
+        "title": "EmbedSkill Website",
+        "image": "assets\/img\/projects\/Embedskill.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            ".net",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#4e2acd",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/embedskill.tryasp.net\/"
+    },
+    {
+        "id": "11",
+        "title": "E-commerce Castro",
+        "image": "assets\/img\/projects\/casro.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            "Spring",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#77bc1f",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/web.facebook.com\/share\/v\/16qeNPAwqe\/"
+    },
+    {
+        "id": "12",
+        "title": "Rent Cars Website",
+        "image": "assets\/img\/projects\/rento.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            ".net",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#4e2acd",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "http:\/\/rento-cars-website.netlify.app\/"
+    },
+    {
+        "id": "13",
+        "title": "Mz-Portfolio",
+        "image": "assets\/img\/projects\/\/mz.png",
+        "category": "category4",
+        "technologies": [
+            "Vite",
+            "Css",
+            "React",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#a052f3",
+            "#264de4",
+            "#60d8f1",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/azeem-portfolioo.netlify.app\/"
+    },
+    {
+        "id": "14",
+        "title": "E-Commerce Website",
+        "image": "assets\/img\/projects\/islamic.png",
+        "category": "category4",
+        "technologies": [
+            "Html",
+            "Css",
+            "JavaScript",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#e44d25",
+            "#264de4",
+            "#fed600",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/bemo2002.github.io\/islamic_clothes\/"
+    },
+    {
+        "id": "15",
+        "title": "National Egypt",
+        "image": "assets\/img\/projects\/heg.png",
+        "category": "category4",
+        "technologies": [
+            "Html",
+            "Css",
+            "JavaScript",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#e44d25",
+            "#264de4",
+            "#fed600",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/bemo2002.github.io\/National-Egypt\/"
+    },
+    {
+        "id": "16",
+        "title": "Website Elmokhptar",
+        "image": "assets\/img\/projects\/elmokhptar.png",
+        "category": "category3",
+        "technologies": [
+            "Html",
+            "Css",
+            "JavaScript",
+            "Bootstrap"
+        ],
+        "techColors": [
+            "#e44d25",
+            "#264de4",
+            "#fed600",
+            "#7511f7"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/bemo2002.github.io\/Elmoktaper_lab\/",
+        "isActive": true
+    },
+    {
+        "id": "17",
+        "title": "Barber Shop",
+        "image": "assets\/img\/projects\/sallon.png",
+        "category": "category3",
+        "technologies": [
+            "Html",
+            "Css",
+            "JavaScript",
+            "Bootstrap"
+        ],
+        "techColors": [
+            "#e44d25",
+            "#264de4",
+            "#fed600",
+            "#7511f7"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/bemo2002.github.io\/Hossam-Hassan\/"
+    },
+    {
+        "id": "18",
+        "title": "Insove Hospital",
+        "image": "assets\/img\/projects\/insove.png",
+        "category": "category4",
+        "technologies": [
+            "Html",
+            "Css",
+            "JavaScript",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#e44d25",
+            "#264de4",
+            "#fed600",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/bemo2002.github.io\/project-tailwind\/"
+    },
+    {
+        "id": "19",
+        "title": "Bank Maser",
+        "image": "assets\/img\/projects\/bank.png",
+        "category": "category3",
+        "technologies": [
+            "Html",
+            "Css",
+            "JavaScript",
+            "Bootstrap"
+        ],
+        "techColors": [
+            "#e44d25",
+            "#264de4",
+            "#fed600",
+            "#7511f7"
+        ],
+        "githubLink": "",
+        "previewLink": ""
+    },
+    {
+        "id": "20",
+        "title": "Comment System",
+        "image": "assets\/img\/projects\/comment.png",
+        "category": "category2",
+        "technologies": [
+            "Html",
+            "Css",
+            "JavaScript",
+            "Bootstrap"
+        ],
+        "techColors": [
+            "#e44d25",
+            "#264de4",
+            "#fed600",
+            "#7511f7"
+        ],
+        "githubLink": "",
+        "previewLink": ""
+    }
+]

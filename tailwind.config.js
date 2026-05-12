@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*.{html,js}"],
+  content: ["*.{html,js}", "./js/**/*.js", "./*.php"],
   theme: {
     
     container :{
@@ -38,9 +38,19 @@ module.exports = {
           "0% , 100%" : {transform: "translateY(0)"},
           "50%" : {transform: "translateY(-13px)"}
         },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
       },
       animation:{
         float : "float 3s ease-in-out infinite",
+        marquee: 'marquee 25s linear infinite',
+        marquee2: 'marquee2 25s linear infinite',
       }
     },
   },

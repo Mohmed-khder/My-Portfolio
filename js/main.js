@@ -1,6 +1,8 @@
-// filter projects
-document.addEventListener("DOMContentLoaded", function () {
-  const mixer = mixitup(".mix-container");
+// filter projects - now initialized after fetch
+let mixer;
+
+function initMixitUp() {
+  mixer = mixitup(".mix-container");
 
   document.querySelectorAll(".filter-btn").forEach((button) => {
     button.addEventListener("click", function () {
@@ -9,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add("active");
     });
   });
-});
+}
 
 //change active buttons
 document.addEventListener("DOMContentLoaded", function () {
@@ -54,16 +56,17 @@ btn.onclick = function () {
 // notification message
 setTimeout(function () {
   var notification = document.getElementById("Notification");
-  notification.classList.add("show");
+  if(notification) notification.classList.add("show");
 }, 1000);
 
 function closeNotification() {
   var notification = document.getElementById("Notification");
-  notification.classList.remove("show");
+  if(notification) notification.classList.remove("show");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
+  if(!form) return;
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");
   const messageInput = document.getElementById("message");
@@ -191,27 +194,90 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const buttons = document.querySelectorAll(".filter-btn");
-
-//   buttons.forEach(button => {
-//       button.addEventListener("click", function () {
-//           if (this.classList.contains("bg-assent-secondary")) {
-
-//               this.classList.remove("bg-assent-secondary", "text-[#fff]");
-//               this.classList.add("bg-white", "text-assent-secondary");
-//           } else {
-
-//               this.classList.remove("bg-white", "text-assent-secondary");
-//               this.classList.add("bg-assent-secondary", "text-white");
-//           }
-//       });
-//   });
-// });
-
-window.addEventListener("load", () => {
+window.addEventListener("load", async () => {
+  // Fix loader: smooth transition without 2.5s delay
+  const loader = document.getElementById("loading");
+  const dataContainer = document.getElementById("data");
+  
   setTimeout(() => {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("data").style.display = "block";
+    // Quick fade out
+    if(loader) {
+        loader.style.opacity = "0";
+        loader.style.transition = "opacity 0.5s ease";
+    }
+    
+    setTimeout(() => {
+      if(loader) loader.style.display = "none";
+      if(dataContainer) dataContainer.style.display = "block";
+    }, 500);
   }, 2500);
+
+  // Fetch projects dynamically
+  await fetchAndRenderProjects();
 });
+
+async function fetchAndRenderProjects() {
+  const container = document.querySelector('.mix-container .grid');
+  if (!container) return;
+
+  try {
+    let res = await fetch('api/projects.php').catch(() => null);
+    if (!res || !res.ok) {
+        res = await fetch('data/projects.json');
+    }
+    
+    const allProjects = await res.json();
+    const projects = allProjects.filter(p => p.isActive !== false);
+    
+    container.innerHTML = '';
+    
+    projects.forEach(p => {
+      let techHTML = '';
+      p.technologies.forEach((tech, index) => {
+          const color = (p.techColors && p.techColors[index]) ? p.techColors[index] : '#333';
+          techHTML += `<li class="px-[15px] lg:px-[20px] py-[8px] mr-1 lg:mr-2 mb-2 rounded-full text-[#fff] font-semibold cursor-pointer text-sm shadow-sm hover:shadow-md transition-all hover:-translate-y-1" style="background-color: ${color}">${tech}</li>`;
+      });
+
+      const cardHTML = `
+        <div class="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 mix ${p.category}">
+            <!-- Image Section -->
+            <div class="relative w-full overflow-hidden cursor-pointer">
+                <img src="${p.image}" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" alt="${p.title}">
+                <!-- Title Overlay (Visible by default, hides on hover) -->
+                <div class="absolute inset-0 flex items-center justify-center font-bold text-white text-2xl md:text-3xl bg-black/40 opacity-100 group-hover:opacity-0 transition-opacity duration-300 text-center px-4">
+                    ${p.title}
+                </div>
+            </div>
+            
+            <!-- Content Section -->
+            <div class="flex flex-col p-6 bg-white text-center border-t border-gray-50 flex-1">
+                
+                <!-- Project Title (Added to fill space elegantly) -->
+                <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-assent-secondary transition-colors duration-300">${p.title}</h3>
+                
+                <div class="w-12 h-1 bg-assent-secondary mx-auto rounded-full mb-4"></div>
+
+                <!-- Tech Stack -->
+                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold mb-3">Technologies Used</p>
+                <ul class="flex flex-wrap justify-center mb-6">
+                    ${techHTML}
+                </ul>
+                
+                <!-- Buttons -->
+                <div class="flex justify-center gap-3 mt-auto">
+                    ${p.githubLink ? `<a href="${p.githubLink}" target="_blank" class="px-[20px] py-[12px] lg:px-[25px] lg:py-[15px] bg-white text-[#000] border border-[#ccc] hover:bg-gray-100 shadow-sm transform transition-all duration-300 ease-in-out hover:-translate-y-1 font-bold rounded-full flex items-center gap-2">Github <i class="ri-github-fill text-xl"></i></a>` : ''}
+                    ${p.previewLink ? `<a href="${p.previewLink}" target="_blank" class="px-[20px] py-[12px] lg:px-[25px] lg:py-[15px] bg-[#000] hover:bg-[#222] shadow-lg text-[#fff] transform transition-all duration-300 ease-in-out hover:-translate-y-1 font-bold rounded-full flex items-center gap-2">Preview <i class="ri-eye-fill text-xl"></i></a>` : ''}
+                </div>
+            </div>
+        </div>
+      `;
+      container.innerHTML += cardHTML;
+    });
+
+    initMixitUp();
+
+  } catch (err) {
+    console.error('Error fetching projects:', err);
+    container.innerHTML = '<p class="text-center w-full col-span-full text-red-500 font-bold">Failed to load projects.</p>';
+  }
+}

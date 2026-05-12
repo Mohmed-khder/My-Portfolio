@@ -36,7 +36,7 @@
                         class="text-secondary font-primary text-[17px] leading-8  flex justify-center items-center gap-x-2 lg:justify-normal">
                         <i class="ri-mail-fill text-2xl text-assent-secondary"></i>
                         <div>
-                            <a href="">mohamedkhder63z@gmail.com</a>
+                            <a href="mailto:123medoabdo@gmail.com">123medoabdo@gmail.com</a>
                         </div>
                     </div>
                     <div
@@ -55,6 +55,9 @@
                             <li class=""><a href="#skills"
                                     class="text-secondary border-r border-[#84540f] pr-4 hover:text-assent transition-all duration-300">Skills</a>
                             </li>
+                            <li class=""><a href="#resume"
+                                    class="text-secondary border-r border-[#84540f] pr-4 hover:text-assent transition-all duration-300">Resume</a>
+                            </li>
                             <li class=""><a href="#projects"
                                     class="text-secondary border-r border-[#84540f] pr-4 hover:text-assent transition-all duration-300">Projects</a>
                             </li>
@@ -69,7 +72,7 @@
         <!-- start links -->
         <div class="nav-bullets fixed right-0 top-[35%] translate-y-[50%] z-50">
             <div class="bullet ">
-                <a href="">
+                <a href="https://github.com/Mohmed-khder" target="_blank">
                     <i class="ri-github-fill text-[30px] text-[#fff] bg-[#000] p-[5px] cursor-pointer"></i>
                 </a>
             </div>
@@ -86,14 +89,12 @@
                 </a>
             </div>
             <div class="bullet">
-                <a href="mohamed-abdul-azeem-khder-8b2753179">
-
+                <a href="https://www.linkedin.com/in/mohamed-abdul-azeem-khder" target="_blank">
                     <i class="ri-linkedin-box-fill text-[30px] text-[#fff] bg-[#0a66c2] p-[5px] cursor-pointer"></i>
                 </a>
             </div>
             <div class="bullet">
-                <a href="mailto:your_123medo@gmail.com">
-
+                <a href="mailto:123medoabdo@gmail.com">
                     <i class="ri-mail-send-line text-[30px] text-[#fff] bg-[#ff0000] p-[5px] cursor-pointer"></i>
                 </a>
             </div>
@@ -104,45 +105,32 @@
             class="top  p-[12px] bg-assent-secondary text-[#fff] border rounded-md  font-bold fixed right-[20px] bottom-[20px] z-10 hover:bg-[#fff] hover:text-assent-secondary transition-all duration-300"><i
                 class="ri-plane-line text-xl"></i></button>
         <!-- end top button -->
-        <!-- start warn -->
-        <div class="Notification w-[300px] p-[20px] bg-gray-500 rounded-lg shadow-custom1 fixed right-[20px] z-50"
-            id="Notification">
-            <div class="Notification-header flex items-center justify-between mb-[10px]">
-                <div class="Notification-icon text-[#fff] bg-[#000] px-[20px] py-[15px] mr-[20px] rounded-full">
-                    <i class="ri-error-warning-fill text-2xl"></i>
-                </div>
-                <div class="Notification-message text-[15px] text-[#fff] font-semibold">
-                    Website is Under Maintenance
-                </div>
-                <div class="Notification-close cursor-pointer ml-auto text-[#000]" onclick="closeNotification()">
-                    <i class="ri-close-large-fill text-xl font-bold"></i>
-                </div>
-            </div>
-        </div>
-        <!-- end warn -->
         <!-- start hero -->
-        <section class="hero bg-gray-100 py-12 lg:pt-12 xl:pb-0 overflow-hidden" id="home">
-            <div class="container mx-auto h-full">
-                <div class="flex flex-col xl:flex-row items-center justify-between h-full">
+        <section class="hero relative bg-gradient-to-br from-gray-50 to-gray-200 py-12 lg:pt-24 xl:pb-0 overflow-hidden" id="home">
+            <!-- Decorative blur background -->
+            <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-assent-secondary opacity-10 rounded-full mix-blend-multiply filter blur-[100px] animate-pulse"></div>
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-400 opacity-10 rounded-full mix-blend-multiply filter blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+            
+            <div class="container mx-auto h-full relative z-10">
+                <div class="flex flex-col xl:flex-row items-center justify-between h-full gap-10">
                     <!-- text -->
-                    <div class="hero__text xl:w-[48%] text-center xl:text-left ">
+                    <div class="hero__text xl:w-[55%] text-center xl:text-left ">
                         <a href="https://drive.google.com/file/d/1p3gyKzOFsVrCWm-f0_qezZ3pqQfuk5WZ/view?usp=drive_link"
-                            class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full mx-auto lg:mx-0">
+                            class="flex items-center bg-white/80 backdrop-blur-md border border-white shadow-sm py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full mx-auto lg:mx-0 hover:shadow-md transition-all hover:-translate-y-1">
                             <i class="ri-download-cloud-fill text-2xl text-assent-secondary"></i>
-                            <div class="uppercase text-base font-medium text-[#9ab4b7]">Download Cv</div>
+                            <div class="uppercase text-sm font-bold text-gray-700">Download CV</div>
                         </a>
-                        <h1 class="text-[36px] xl:text-[64px] font-semibold mb-6 text-primary leading-[120%]">Mohamed
-                            Abdul
-                            Azeem Khder</h1>
-                        <p class="mb-[42px] md:max-w-2xl font-semibold">I’m an Software Engineer with expertise in Web
-                            Development (front end) . Dynamic and results-driven
-                            Frontend Developer specializing in React.js, JavaScript, and modern CSS frameworks.Proven
-                            ability to design
-                            intuitive user interfaces and optimize web applications for performance.
+                        <h1 class="text-[40px] xl:text-[72px] font-black mb-2 leading-[1.1] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 drop-shadow-sm">
+                            Mohamed Abdul Azeem
+                        </h1>
+                        <h2 class="text-xl md:text-2xl text-assent-secondary font-bold mb-6 tracking-wide">Frontend Engineer | React & Next.js Specialist</h2>
+                        <p class="mb-[42px] md:max-w-2xl text-lg text-gray-600 font-medium leading-relaxed text-justify lg:text-left">
+                            Frontend Engineer specialized in building scalable, responsive, and high-performance web applications using <span class="text-assent-secondary font-bold">React.js, Next.js, and modern frontend technologies</span>. Experienced in developing production-level platforms across tourism, healthcare, booking systems, and e-commerce with a strong focus on UI/UX, SEO optimization, and clean frontend architecture.
                         </p>
-                        <button
-                            class=" rounded-full uppercase tracking-[1.02px] flex items-center justify-centertranslate-all h-16 px-[50px] bg-assent-secondary text-white hover:bg-white hover:text-assent-secondary border border-[#ccc] duration-300 mx-auto lg:mx-0 font-semibold">My
-                            Github <i class="ri-github-fill text-2xl ml-2"></i></button>
+                        <a href="#projects"
+                            class="inline-flex rounded-full uppercase tracking-wider items-center justify-center h-14 px-[40px] bg-gradient-to-r from-gray-900 to-gray-800 text-white hover:shadow-xl hover:scale-105 transition-all duration-300 mx-auto lg:mx-0 font-bold shadow-lg">
+                            View My Work <i class="ri-arrow-right-line text-xl ml-2"></i>
+                        </a>
                     </div>
                     <!-- image -->
                     <div class="hero__img mt-4 lg:mt-0 xl:flex max-w-[814px]  self-end">
@@ -153,52 +141,145 @@
         </section>
         <!-- end hero -->
         <!-- start skills -->
-        <section class="pt-20 pb-20 " id="skills">
-            <div class="container mx-auto  font-semibold">
-                <div>
-                    <h2
-                        class="text-assent-secondary mb-4 xl:mb-0 text-center xl:text-center flex-1 text-[40px] xl:text-[60px] font-bold capitalize tracking-[0,44px] leading-[120%]">
-                        Skills</h2>
+        <section class="pt-24 pb-24 overflow-hidden bg-white" id="skills">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-assent-secondary text-sm font-bold tracking-widest uppercase mb-2">My Expertise</h2>
+                    <h1 class="text-[40px] lg:text-[48px] font-black text-gray-900 leading-tight">Skills & Tools</h1>
                 </div>
-                <div
-                    class="flex flex-col items-center justify-between gap-7 lg:flex-row lg:items-center lg:lg:justify-between mt-20 overflow-hidden">
-                    <div class="w-[150px]">
-                        <img src="assets/img/skills/html-logo.webp" class="w-full  " alt="html">
+            </div>
+                
+            <!-- Infinite Slider Container (Full Width) -->
+            <div class="relative flex overflow-hidden group w-full bg-gray-50 py-10 border-y border-gray-100 shadow-inner">
+                    <div class="animate-marquee flex items-center justify-around gap-16 md:gap-24 min-w-full shrink-0 px-8">
+                        <img src="assets/img/skills/html-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="html">
+                        <img src="assets/img/skills/css-logo.webp" class="w-16 md:w-24 object-contain hover:scale-110 transition-transform duration-300" alt="css">
+                        <img src="assets/img/skills/js-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="js">
+                        <img src="assets/img/skills/react-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="react">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="nextjs">
+                        <img src="assets/img/skills/bootstrap-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="Bootstrap">
+                        <img src="assets/img/skills/tailwind-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="Tailwind">
+                        <img src="assets/img/skills/git-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="git">
+                        <img src="assets/img/skills/download.png" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="jquery">
+                        <img src="assets/img/skills/sass-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="sass">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="typescript">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="redux">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="postman">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="figma">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="firebase">
                     </div>
-                    <div class="w-[110px] ">
-                        <img src="assets/img/skills/css-logo.webp" class=" w-full  " alt="css">
+                    <!-- Duplicate for infinite loop -->
+                    <div class="animate-marquee flex items-center justify-around gap-16 md:gap-24 min-w-full shrink-0 px-8" aria-hidden="true">
+                        <img src="assets/img/skills/html-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="html">
+                        <img src="assets/img/skills/css-logo.webp" class="w-16 md:w-24 object-contain hover:scale-110 transition-transform duration-300" alt="css">
+                        <img src="assets/img/skills/js-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="js">
+                        <img src="assets/img/skills/react-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="react">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="nextjs">
+                        <img src="assets/img/skills/bootstrap-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="Bootstrap">
+                        <img src="assets/img/skills/tailwind-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="Tailwind">
+                        <img src="assets/img/skills/git-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="git">
+                        <img src="assets/img/skills/download.png" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="jquery">
+                        <img src="assets/img/skills/sass-logo.webp" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="sass">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="typescript">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="redux">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="postman">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="figma">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" class="w-20 md:w-28 object-contain hover:scale-110 transition-transform duration-300" alt="firebase">
                     </div>
-                    <div class="w-[150px]  ">
-                        <img src="assets/img/skills/js-logo.webp" class="w-full  " alt="js">
+                </div>
+        </section>
+        <!-- end skills -->
+
+        <!-- start resume -->
+        <section class="pt-24 pb-24 bg-white" id="resume">
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-assent-secondary text-sm font-bold tracking-widest uppercase mb-2">My Journey</h2>
+                    <h1 class="text-[40px] lg:text-[48px] font-black text-gray-900 leading-tight">Experience & Education</h1>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    
+                    <!-- Experience Column -->
+                    <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold mb-10 flex items-center gap-3 text-gray-800">
+                            <i class="ri-briefcase-4-fill text-assent-secondary text-3xl"></i> Professional Experience
+                        </h3>
+                        <div class="relative border-l-2 border-gray-200 ml-4 space-y-12">
+                            
+                            <!-- WEMISC -->
+                            <div class="relative pl-8">
+                                <span class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-white border-[6px] border-assent-secondary shadow-sm"></span>
+                                <h4 class="text-xl font-bold text-gray-900">Frontend Engineer</h4>
+                                <h5 class="text-assent-secondary font-semibold text-md mb-2">WEMISC Company</h5>
+                                <span class="inline-block px-3 py-1 bg-white border border-gray-200 text-gray-600 text-xs rounded-full font-bold uppercase tracking-wider mb-4">1 Year</span>
+                                <ul class="list-disc list-outside ml-4 text-gray-600 space-y-2 text-justify">
+                                    <li>Developed and maintained responsive frontend applications using React.js and Next.js.</li>
+                                    <li>Built scalable UI systems and optimized user experiences across multiple products.</li>
+                                    <li>Collaborated with cross-functional teams to deliver modern business solutions for real clients.</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Eyosyst -->
+                            <div class="relative pl-8">
+                                <span class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-white border-[6px] border-assent-secondary shadow-sm"></span>
+                                <h4 class="text-xl font-bold text-gray-900">Freelance Frontend Developer</h4>
+                                <h5 class="text-assent-secondary font-semibold text-md mb-2">Eyosyst Company</h5>
+                                <span class="inline-block px-3 py-1 bg-white border border-gray-200 text-gray-600 text-xs rounded-full font-bold uppercase tracking-wider mb-4">6 Months (Project-Based)</span>
+                                <ul class="list-disc list-outside ml-4 text-gray-600 space-y-2 text-justify">
+                                    <li>Worked on freelance frontend projects focused on scalable architecture and responsive design.</li>
+                                    <li>Integrated REST APIs and optimized frontend performance for production-level applications.</li>
+                                    <li>Delivered modern UI/UX solutions tailored to client requirements and business goals.</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="w-[150px]  ">
-                        <img src="assets/img/skills/react-logo.webp" class="w-full  " alt="react">
+                    
+                    <!-- Education Column -->
+                    <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <h3 class="text-2xl font-bold mb-10 flex items-center gap-3 text-gray-800">
+                            <i class="ri-graduation-cap-fill text-assent-secondary text-3xl"></i> Education & Internships
+                        </h3>
+                        <div class="relative border-l-2 border-gray-200 ml-4 space-y-12">
+                            
+                            <!-- Tanta Uni -->
+                            <div class="relative pl-8">
+                                <span class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-white border-[6px] border-assent-secondary shadow-sm"></span>
+                                <h4 class="text-xl font-bold text-gray-900">Communication & Computer Engineering</h4>
+                                <h5 class="text-assent-secondary font-semibold text-md mb-2">Tanta University (THIT)</h5>
+                                <span class="inline-block px-3 py-1 bg-white border border-gray-200 text-gray-600 text-xs rounded-full font-bold uppercase tracking-wider mb-4">Bachelor's Degree</span>
+                                <p class="text-gray-600 text-justify">
+                                    <strong>Coursework:</strong> Front End Web Developer & Artificial Intelligence.
+                                </p>
+                            </div>
+                            
+                            <!-- MCIT -->
+                            <div class="relative pl-8">
+                                <span class="absolute -left-[13px] top-1 w-6 h-6 rounded-full bg-white border-[6px] border-assent-secondary shadow-sm"></span>
+                                <h4 class="text-xl font-bold text-gray-900">Diploma in IT & Communication</h4>
+                                <h5 class="text-assent-secondary font-semibold text-md mb-2">MCIT (Digital Egypt Generation)</h5>
+                                <span class="inline-block px-3 py-1 bg-white border border-gray-200 text-gray-600 text-xs rounded-full font-bold uppercase tracking-wider mb-4">Internship</span>
+                                <p class="text-gray-600 text-justify">
+                                    <strong>Specialization:</strong> React Frontend Web Developer.
+                                </p>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="w-[150px]  ">
-                        <img src="assets/img/skills/bootstrap-logo.webp" class="w-full  " alt="Bootstrap">
-                    </div>
-                    <div class="w-[150px]  ">
-                        <img src="assets/img/skills/tailwind-logo.webp" class="w-full  " alt="Tailwind">
-                    </div>
-                    <div class="w-[150px]  ">
-                        <img src="assets/img/skills/git-logo.webp" class="w-full  " alt="git">
-                    </div>
-                    <div class="w-[150px]  ">
-                        <img src="assets/img/skills/download.png" class="w-full  " alt="jquery">
-                    </div>
-                    <div class="w-[150px]  ">
-                        <img src="assets/img/skills/sass-logo.webp" class="w-full  " alt="jquery">
-                    </div>
+                    
                 </div>
             </div>
         </section>
-        <!-- end skills -->
+        <!-- end resume -->
         <!-- start projects -->
-        <section class="pt-20 pb-20 " id="projects">
-            <!-- <div> -->
-            <!-- <h2 class="text-assent-secondary mb-4 xl:mb-0 text-center xl:text-center flex-1 text-[40px] xl:text-[60px] font-bold capitalize tracking-[0,44px] leading-[120%]">Projects</h2> -->
-            <!-- </div> -->
-            <div class="filter text-center mt-20 ">
+        <section class="pt-24 pb-24 bg-gray-50" id="projects">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-assent-secondary text-sm font-bold tracking-widest uppercase mb-2">My Portfolio</h2>
+                    <h1 class="text-[40px] lg:text-[48px] font-black text-gray-900 leading-tight">Featured Projects</h1>
+                </div>
+            <div class="filter text-center ">
                 <div class="flex justify-center text-center  ">
 
                     <button
@@ -231,883 +312,7 @@
             </div>
             <div class="container mx-auto  mix-container">
                 <div class="grid grid-cols-1  lg:grid-cols-2 gap-6 mt-20  ">
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/flanka.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all  overflow-hidden"
-                                alt="NileTours">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Flanka E-Commerce
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7377ad] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    php</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://site36535-aeutcg.scloudsite101.com/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/kmena.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all  overflow-hidden"
-                                alt="NileTours">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Kmena Website
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7377ad] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    php</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://k-mena.com/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/ALPHA2.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="NileTours">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Alpha Prime Events
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li 
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7377ad] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    php</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://site69104-2d52bz.scloudsite101.com"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/kns.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="NileTours">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                kns Orgnization
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li 
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7377ad] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    php</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://newwebsite.kuwaitneuro.org"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/mediaf2.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="NileTours">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Mediaf Restaurant
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li 
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7377ad] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    php</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://medyafalsharq.com/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/mile-tours.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="NileTours">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                NileTours Company
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li 
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#4e2acd] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    .net</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://niletours.co"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/geoduke.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                GeoDuke Company
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#4e2acd] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    .net</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://geoduke.com"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/EcoComapny.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                EcoSyst Company
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#4e2acd] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    .net</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="http://ecosyst-website.netlify.app"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/Arkan.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Arkan Website
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li 
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#4e2acd] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    .net</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://arkann.netlify.app"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/Embedskill.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                EmbedSkill Website
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li 
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#4e2acd] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    .net</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://embedskill.tryasp.net/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/casro.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                E-commerce Castro
-                            </div>
-                        </div>
-                        <div class="bg-red-500 p-1 rounded-lg mt-2 text-white cursor-pointer">
-                            <p class=" text-center"><i class="ri-error-warning-fill"></i> The backend is not live yet,
-                                so some parts
-                                of the site
-                                might not be fully
-                                functional.</p>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[14px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[14px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[14px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li 
-                                    class="px-[14px] lg:px-[20px] py-[10px] bg-[#77bc1f] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Spring</li>
-                                <li
-                                    class="px-[14px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://web.facebook.com/share/v/16qeNPAwqe/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/rento.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Rent Cars Website
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React
-                                </li>
-                                <li 
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#4e2acd] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    .net</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="http://rento-cars-website.netlify.app/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects//mz.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="Portfolio">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Mz-Portfolio
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#a052f3] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Vite</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#60d8f1] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    React</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://azeem-portfolioo.netlify.app/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-
-
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/islamic.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                E-Commerce Website
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Html</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#fed600] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    JavaScript</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://bemo2002.github.io/islamic_clothes/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-
-
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/heg.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                National Egypt
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Html</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#fed600] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    JavaScript</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://bemo2002.github.io/National-Egypt/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category3">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/elmokhptar.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="elmokhptar">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Website Elmokhptar
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center ">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Html</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#fed600] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    JavaScript</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7511f7] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Bootstrap</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8 ">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://bemo2002.github.io/Elmoktaper_lab/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category3 ">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/sallon.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="sallon">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Barber Shop
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Html</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#fed600] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    JavaScript</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7511f7] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Bootstrap</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://bemo2002.github.io/Hossam-Hassan/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category4">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/insove.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="insove">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Insove Hospital
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Html</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#fed600] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    JavaScript</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#39bcf9] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Tailwind</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href="https://bemo2002.github.io/project-tailwind/"
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category3">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/bank.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Bank Maser
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Html</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#fed600] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    JavaScript</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7511f7] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Bootstrap</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category2">
-                        <div class="relative w-full group overflow-hidden">
-                            <img src="assets/img/projects/comment.png"
-                                class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden"
-                                alt="">
-                            <div
-                                class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all ">
-                                Comment System
-                            </div>
-                        </div>
-                        <div class="info mt-10">
-                            <ul class="flex flex-row justify-center">
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Html</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Css</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#fed600] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    JavaScript</li>
-                                <li
-                                    class="px-[15px] lg:px-[20px] py-[10px] bg-[#7511f7] mr-1 lg:mr-2 rounded-full text-[#fff] font-semibold cursor-pointer">
-                                    Bootstrap</li>
-                            </ul>
-                        </div>
-                        <div class="flex justify-center mt-8">
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github
-                                Repo <i class="ri-github-fill cursor-pointer"></i></a>
-                            <a href=""
-                                class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview
-                                Link <i class="ri-eye-fill"></i> </a>
-                        </div>
-                    </div>
-                    <!-- <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category1"> -->
-                    <!-- <div class="relative w-full group overflow-hidden"> -->
-                    <!-- <img src="assets/img/projects/hospital.png" -->
-                    <!-- class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden" -->
-                    <!-- alt="hospital"> -->
-                    <!-- <div -->
-                    <!-- class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all "> -->
-                    <!-- Website Hospital -->
-                    <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="info mt-10"> -->
-                    <!-- <ul class="flex flex-row justify-center"> -->
-                    <!-- <li -->
-                    <!-- class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-2 rounded-full text-[#fff] font-semibold cursor-pointer"> -->
-                    <!-- Html</li> -->
-                    <!-- <li -->
-                    <!-- class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-2 rounded-full text-[#fff] font-semibold cursor-pointer"> -->
-                    <!-- Css</li> -->
-                    <!-- </ul> -->
-                    <!-- </div> -->
-                    <!-- <div class="flex justify-center mt-8"> -->
-                    <!-- <a href="" -->
-                    <!-- class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github -->
-                    <!-- Repo <i class="ri-github-fill cursor-pointer"></i></a> -->
-                    <!-- <a href="" -->
-                    <!-- class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview -->
-                    <!-- Link <i class="ri-eye-fill"></i> </a> -->
-                    <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category1"> -->
-                    <!-- <div class="relative w-full group overflow-hidden"> -->
-                    <!-- <img src="assets/img/projects/game.png" -->
-                    <!-- class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden" -->
-                    <!-- alt="game"> -->
-                    <!-- <div -->
-                    <!-- class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all "> -->
-                    <!-- Game Store -->
-                    <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="info mt-10"> -->
-                    <!-- <ul class="flex flex-row justify-center"> -->
-                    <!-- <li -->
-                    <!-- class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-2 rounded-full text-[#fff] font-semibold cursor-pointer"> -->
-                    <!-- Html</li> -->
-                    <!-- <li -->
-                    <!-- class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-2 rounded-full text-[#fff] font-semibold cursor-pointer"> -->
-                    <!-- Css</li> -->
-                    <!-- </ul> -->
-                    <!-- </div> -->
-                    <!-- <div class="flex justify-center mt-8"> -->
-                    <!-- <a href="" -->
-                    <!-- class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github -->
-                    <!-- Repo <i class="ri-github-fill cursor-pointer"></i></a> -->
-                    <!-- <a href="" -->
-                    <!-- class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview -->
-                    <!-- Link <i class="ri-eye-fill"></i> </a> -->
-                    <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category1"> -->
-                    <!-- <div class="relative w-full group overflow-hidden"> -->
-                    <!-- <img src="assets/img/projects/dash.png" -->
-                    <!-- class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden" -->
-                    <!-- alt="dash"> -->
-                    <!-- <div -->
-                    <!-- class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all "> -->
-                    <!-- Dashboard -->
-                    <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="info mt-10"> -->
-                    <!-- <ul class="flex flex-row justify-center"> -->
-                    <!-- <li -->
-                    <!-- class="px-[15px] lg:px-[20px] py-[10px] bg-[#e44d25] mr-2 rounded-full text-[#fff] font-semibold cursor-pointer"> -->
-                    <!-- Html</li> -->
-                    <!-- <li -->
-                    <!-- class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-2 rounded-full text-[#fff] font-semibold cursor-pointer"> -->
-                    <!-- Css</li> -->
-                    <!-- </ul> -->
-                    <!-- </div> -->
-                    <!-- <div class="flex justify-center mt-8"> -->
-                    <!-- <a href="" -->
-                    <!-- class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github -->
-                    <!-- Repo <i class="ri-github-fill cursor-pointer"></i></a> -->
-                    <!-- <a href="" -->
-                    <!-- class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview -->
-                    <!-- Link <i class="ri-eye-fill"></i> </a> -->
-                    <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class=" p-[15px] bg-white shadow-custom1  rounded-md overflow-hidden mix category1"> -->
-                    <!-- <div class="relative w-full group overflow-hidden"> -->
-                    <!-- <img src="assets/img/projects/furniture.png" -->
-                    <!-- class="w-full group-hover:scale-110 duration-300 transition-all rounded-3xl overflow-hidden" -->
-                    <!-- alt="furniture"> -->
-                    <!-- <div -->
-                    <!-- class="absolute inset-0 flex items-center justify-center font-bold text-[#fff] text-3xl bg-black bg-opacity-30 opacity-100 group-hover:opacity-0 duration-300 transition-all "> -->
-                    <!-- Furniture Website -->
-                    <!-- </div> -->
-                    <!-- </div> -->
-                    <!-- <div class="info mt-10"> -->
-                    <!-- <ul class="flex flex-row justify-center"> -->
-                    <!-- <li -->
-                    <!-- class="px-[15px] lg:px-[20px]  py-[10px] bg-[#e44d25] mr-2 rounded-full text-[#fff] font-semibold cursor-pointer"> -->
-                    <!-- Html</li> -->
-                    <!-- <li -->
-                    <!-- class="px-[15px] lg:px-[20px] py-[10px] bg-[#264de4] mr-2 rounded-full text-[#fff] font-semibold cursor-pointer"> -->
-                    <!-- Css</li> -->
-                    <!-- </ul> -->
-                    <!-- </div> -->
-                    <!-- <div class="flex justify-center mt-8"> -->
-                    <!-- <a href="" -->
-                    <!-- class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#000] text-[#fff] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Github -->
-                    <!-- Repo <i class="ri-github-fill cursor-pointer"></i></a> -->
-                    <!-- <a href="" -->
-                    <!-- class="mr-2 px-[15px] py-[10px] lg:px-[25px] lg:py-[18px] bg-[#fff] text-[#000] border border-[#ccc] transform transition-transform duration-300 ease-in-out hover:scale-110 font-bold rounded-full">Preview -->
-                    <!-- Link <i class="ri-eye-fill"></i> </a> -->
-                    <!-- </div> -->
-                    <!-- </div> -->
+                    <!-- Projects will be dynamically injected here by main.js -->
                 </div>
             </div>
             <!-- <div class="flex justify-center mt-12"> -->
@@ -1118,46 +323,53 @@
         </section>
         <!-- end projects -->
         <!-- start contact -->
-        <section class="pt-20 pb-20" id="contact">
-            <div class="container mx-auto">
-                <div class="bg-gray-50 shadow-lg rounded-lg p-6 w-full ">
-                    <h1 class="text-[40px] font-bold text-center mb-4">Contact With Me </h1>
-                    <form id="contactForm" class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700">Enter Your Name</label>
-                            <input type="text" id="name" name="name" required minlength="2" maxlength="50"
-                                class="mt-1 block w-full px-4 py-2 border rounded-md shadow-sm border-[#ccc] outline-none focus:border-assent-secondary invalid:border-red-500 invalid:bg-red-50"
-                                placeholder="Enter Your Name">
-                            <span class="text-red-500 text-sm hidden" id="nameError"></span>
+        <section class="pt-24 pb-24 relative bg-white" id="contact">
+            <!-- Decorative background element -->
+            <div class="absolute top-1/2 left-0 w-[400px] h-[400px] bg-assent-secondary opacity-5 rounded-full filter blur-[80px] -translate-y-1/2 -z-10"></div>
+            <div class="container mx-auto relative z-10">
+                <div class="bg-white/90 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-3xl p-8 lg:p-12 w-full max-w-4xl mx-auto border border-gray-100">
+                    <div class="text-center mb-10">
+                        <h2 class="text-assent-secondary text-sm font-bold tracking-widest uppercase mb-2">Get In Touch</h2>
+                        <h1 class="text-[40px] lg:text-[48px] font-black text-gray-900 leading-tight">Contact With Me</h1>
+                    </div>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" required minlength="2" maxlength="50"
+                                    class="block w-full px-5 py-4 bg-gray-50 border-0 rounded-xl shadow-inner outline-none focus:ring-2 focus:ring-assent-secondary transition-all invalid:border-red-500 invalid:bg-red-50"
+                                    placeholder="John Doe">
+                                <span class="text-red-500 text-sm hidden mt-1" id="nameError"></span>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" required
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    class="block w-full px-5 py-4 bg-gray-50 border-0 rounded-xl shadow-inner outline-none focus:ring-2 focus:ring-assent-secondary transition-all invalid:border-red-500 invalid:bg-red-50"
+                                    placeholder="john@example.com">
+                                <span class="text-red-500 text-sm hidden mt-1" id="emailError"></span>
+                            </div>
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Enter Your Email</label>
-                            <input type="email" id="email" name="email" required
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                                class="mt-1 block w-full px-4 py-2 border rounded-md shadow-sm border-[#ccc] outline-none focus:border-assent-secondary invalid:border-red-500 invalid:bg-red-50"
-                                placeholder="Enter Your Email">
-                            <span class="text-red-500 text-sm hidden" id="emailError"></span>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700">Enter Your
-                                Message</label>
+                            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Your Message</label>
                             <textarea id="message" name="message" rows="4" required minlength="10" maxlength="20"
-                                class="mt-1 block w-full px-4 py-2 border rounded-md shadow-sm border-[#ccc] outline-none min-h-[200px] resize-none focus:border-assent-secondary invalid:border-red-500 invalid:bg-red-50"
-                                placeholder="Enter Your Message"></textarea>
-                            <span class="text-red-500 text-sm hidden" id="messageError"></span>
-                            <div class="text-right text-sm text-gray-500">
+                                class="block w-full px-5 py-4 bg-gray-50 border-0 rounded-xl shadow-inner outline-none min-h-[150px] resize-none focus:ring-2 focus:ring-assent-secondary transition-all invalid:border-red-500 invalid:bg-red-50"
+                                placeholder="How can I help you?"></textarea>
+                            <span class="text-red-500 text-sm hidden mt-1" id="messageError"></span>
+                            <div class="text-right text-sm text-gray-500 mt-2 font-medium">
                                 <span id="messageCount">0</span>/20 characters
                             </div>
                         </div>
-                        <div id="formStatus" class="hidden rounded-md p-4 mb-4">
+                        <div id="formStatus" class="hidden rounded-xl p-4 mb-4 font-medium">
                         </div>
                         <button type="submit"
-                            class="w-full py-3 px-4 bg-assent-secondary text-white font-bold text-[20px] rounded-md hover:bg-white hover:text-assent-secondary duration-300 focus:outline-none focus:ring-2 border border-[#ccc] disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="w-full py-4 px-6 bg-gradient-to-r from-gray-900 to-gray-800 text-white font-bold text-[18px] rounded-xl hover:shadow-xl hover:scale-[1.02] duration-300 focus:outline-none focus:ring-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2"
                             id="submitButton">
-                            Send Message
+                            Send Message <i class="ri-send-plane-fill"></i>
                         </button>
                     </form>
                 </div>
+            </div>
         </section>
         <!-- end contact -->
         <!-- start footer -->

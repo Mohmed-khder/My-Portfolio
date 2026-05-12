@@ -221,12 +221,20 @@ async function fetchAndRenderProjects() {
   if (!container) return;
 
   try {
-    let res = await fetch('api/projects.php').catch(() => null);
-    if (!res || !res.ok) {
-        res = await fetch('data/projects.json');
+    let allProjects;
+    try {
+        // Try to fetch from PHP API
+        let res = await fetch('api/projects.php');
+        if (!res.ok) throw new Error("API response not ok");
+        // If hosted on Netlify, this will return the raw PHP text and throw a SyntaxError here
+        allProjects = await res.json(); 
+    } catch (apiError) {
+        console.warn('PHP API unavailable or returned non-JSON. Falling back to static JSON.', apiError);
+        // Fallback to static JSON
+        let fallbackRes = await fetch('data/projects.json');
+        allProjects = await fallbackRes.json();
     }
     
-    const allProjects = await res.json();
     const projects = allProjects.filter(p => p.isActive !== false);
     
     container.innerHTML = '';

@@ -1,5 +1,51 @@
 [
     {
+        "id": "23",
+        "title": "Dr-mohamed-Portfolio",
+        "image": "assets\/img\/projects\/1778629912_mohamedtallat.png",
+        "category": "category4",
+        "technologies": [
+            "React",
+            "Next.js",
+            "Tailwind",
+            "JavaScript",
+            "PHP"
+        ],
+        "techColors": [
+            "#60d8f1",
+            "#000000",
+            "#39bcf9",
+            "#fed600",
+            "#7377ad"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/mohamedtalat.com\/ar",
+        "isActive": true,
+        "isFeatured": true
+    },
+    {
+        "id": "22",
+        "title": "Insta-Health",
+        "image": "assets\/img\/projects\/1778629768_insta.png",
+        "category": "category4",
+        "technologies": [
+            "React",
+            "Tailwind",
+            "JavaScript",
+            "HTML"
+        ],
+        "techColors": [
+            "#60d8f1",
+            "#39bcf9",
+            "#fed600",
+            "#e44d25"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/insta-health.net\/",
+        "isActive": true,
+        "isFeatured": true
+    },
+    {
         "id": "21",
         "title": "Rehltna-Travel",
         "image": "assets\/img\/projects\/1778629493_rehltna.png",

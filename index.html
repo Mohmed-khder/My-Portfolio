@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/input.css">
 </head>
 
-<body>
+<body class="overflow-x-hidden relative">
     <div id="loading">
         <div class="flex items-center justify-center h-screen">
             <div class="loader-tailwind relative w-[100px] h-[45px]">
@@ -29,43 +29,70 @@
     </div>
     <div id="data" class="hidden">
         <!-- header -->
-        <header class="py-8 lg:pt-6 lg:pb-6 text-secondary font-primary text-[15px] leading-8">
-            <div class="container mx-auto lg:relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
-                <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 lg:pap-y-0 mx-auto">
-                    <div
-                        class="text-secondary font-primary text-[17px] leading-8  flex justify-center items-center gap-x-2 lg:justify-normal">
-                        <i class="ri-mail-fill text-2xl text-assent-secondary"></i>
-                        <div>
-                            <a href="mailto:123medoabdo@gmail.com">123medoabdo@gmail.com</a>
+        <header class="py-4 lg:pt-6 lg:pb-6 text-secondary font-primary text-[15px] leading-8 relative z-50">
+            <div class="container mx-auto relative flex flex-col lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
+                <div class="flex flex-col gap-y-4 lg:flex-row lg:gap-x-10 mx-auto w-full">
+                    
+                    <!-- Top Bar with Contact Info & Mobile Menu Button -->
+                    <div class="flex justify-between items-center w-full lg:w-auto px-4 lg:px-0">
+                        
+                        <!-- Desktop Contact Info -->
+                        <div class="hidden lg:flex flex-col sm:flex-row gap-2 sm:gap-6">
+                            <div class="text-secondary font-primary text-[15px] sm:text-[17px] leading-8 flex items-center gap-x-2">
+                                <i class="ri-mail-fill text-xl sm:text-2xl text-assent-secondary"></i>
+                                <a href="mailto:123medoabdo@gmail.com" class="hover:text-assent-secondary transition-colors">123medoabdo@gmail.com</a>
+                            </div>
+                            <div class="text-secondary font-primary text-[15px] sm:text-[17px] leading-8 flex items-center gap-x-2">
+                                <i class="ri-phone-fill text-xl sm:text-2xl text-assent-secondary"></i>
+                                <span>(+20) 01028768312</span>
+                            </div>
                         </div>
+
+                        <!-- Mobile Logo (Initials) -->
+                        <div class="lg:hidden flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-gray-900 to-gray-800 text-white font-black text-xl shadow-lg border border-gray-700 tracking-wider">
+                            MK
+                        </div>
+
+                        <!-- Mobile Menu Button -->
+                        <button id="mobileMenuBtn" class="lg:hidden text-2xl text-assent-secondary p-2 bg-white rounded-xl shadow-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-assent-secondary transition-all">
+                            <i class="ri-menu-4-line" id="menuIcon"></i>
+                        </button>
                     </div>
-                    <div
-                        class="text-secondary font-primary text-[17px] leading-8 flex justify-center items-center gap-x-2 lg:justify-center">
-                        <i class="ri-phone-fill text-2xl text-assent-secondary"></i>
-                        <div class="text-secondary">(+20) 01028768312</div>
-                    </div>
-                    <!-- desktop nav -->
-                    <nav
-                        class="bg-white flex items-center justify-center  w-fit  -bottom-[70px] shadow-custom1 h-14 rounded-full ">
-                        <ul
-                            class=" flex items-center justify-center mx-auto gap-x-4 px-[9px]  font-semibold lg:px-[60px]">
-                            <li class=""><a href="#home"
-                                    class="text-secondary border-r border-[#84540f] pr-4   hover:text-assent transition-all duration-300">Home</a>
-                            </li>
-                            <li class=""><a href="#skills"
-                                    class="text-secondary border-r border-[#84540f] pr-4 hover:text-assent transition-all duration-300">Skills</a>
-                            </li>
-                            <li class=""><a href="#resume"
-                                    class="text-secondary border-r border-[#84540f] pr-4 hover:text-assent transition-all duration-300">Resume</a>
-                            </li>
-                            <li class=""><a href="#projects"
-                                    class="text-secondary border-r border-[#84540f] pr-4 hover:text-assent transition-all duration-300">Projects</a>
-                            </li>
-                            <li class=""><a href="#contact"
-                                    class="text-secondary  pr-4 hover:text-assent transition-all duration-300">Contact</a>
-                            </li>
+
+                    <!-- Desktop Nav -->
+                    <nav class="bg-white hidden lg:flex items-center justify-center w-fit mx-auto shadow-[0_4px_20px_rgba(0,0,0,0.05)] h-14 rounded-full px-6 border border-gray-50">
+                        <ul class="flex items-center justify-center gap-x-6 font-bold text-[15px]">
+                            <li><a href="#home" class="text-secondary border-r border-gray-200 pr-6 hover:text-assent-secondary transition-all duration-300">Home</a></li>
+                            <li><a href="#skills" class="text-secondary border-r border-gray-200 pr-6 hover:text-assent-secondary transition-all duration-300">Skills</a></li>
+                            <li><a href="#resume" class="text-secondary border-r border-gray-200 pr-6 hover:text-assent-secondary transition-all duration-300">Resume</a></li>
+                            <li><a href="#projects" class="text-secondary border-r border-gray-200 pr-6 hover:text-assent-secondary transition-all duration-300">Projects</a></li>
+                            <li><a href="#contact" class="text-secondary hover:text-assent-secondary transition-all duration-300">Contact</a></li>
                         </ul>
                     </nav>
+
+                    <!-- Mobile Dropdown Menu -->
+                    <div id="mobileMenu" class="absolute top-full left-4 right-4 mt-2 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 opacity-0 invisible scale-95 origin-top z-50 lg:hidden border border-gray-100">
+                        
+                        <!-- Mobile Contact Info in Dropdown -->
+                        <div class="flex flex-col items-center justify-center gap-3 p-6 bg-gray-50 border-b border-gray-100">
+                            <div class="text-sm font-bold flex items-center gap-x-2 text-gray-700 bg-white px-4 py-2 rounded-full shadow-sm w-full justify-center">
+                                <i class="ri-mail-fill text-lg text-assent-secondary"></i>
+                                <a href="mailto:123medoabdo@gmail.com">123medoabdo@gmail.com</a>
+                            </div>
+                            <div class="text-sm font-bold flex items-center gap-x-2 text-gray-700 bg-white px-4 py-2 rounded-full shadow-sm w-full justify-center">
+                                <i class="ri-phone-fill text-lg text-assent-secondary"></i>
+                                <a href="tel:+2001028768312">(+20) 01028768312</a>
+                            </div>
+                        </div>
+
+                        <ul class="flex flex-col text-center font-bold text-gray-800 divide-y divide-gray-100">
+                            <li><a href="#home" class="block py-4 hover:bg-gray-50 hover:text-assent-secondary transition-colors mobile-link">Home</a></li>
+                            <li><a href="#skills" class="block py-4 hover:bg-gray-50 hover:text-assent-secondary transition-colors mobile-link">Skills</a></li>
+                            <li><a href="#resume" class="block py-4 hover:bg-gray-50 hover:text-assent-secondary transition-colors mobile-link">Resume</a></li>
+                            <li><a href="#projects" class="block py-4 hover:bg-gray-50 hover:text-assent-secondary transition-colors mobile-link">Projects</a></li>
+                            <li><a href="#contact" class="block py-4 hover:bg-gray-50 hover:text-assent-secondary transition-colors mobile-link">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
@@ -274,7 +301,7 @@
         <!-- end resume -->
         <!-- start projects -->
         <section class="pt-24 pb-24 bg-gray-50" id="projects">
-            <div class="container mx-auto">
+            <div class="w-[95%] md:w-[85%] xl:max-w-[1500px] mx-auto px-2 sm:px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-assent-secondary text-sm font-bold tracking-widest uppercase mb-2">My Portfolio</h2>
                     <h1 class="text-[40px] lg:text-[48px] font-black text-gray-900 leading-tight">Featured Projects</h1>
@@ -310,8 +337,8 @@
                     </button>
                 </div>
             </div>
-            <div class="container mx-auto  mix-container">
-                <div class="grid grid-cols-1  lg:grid-cols-2 gap-6 mt-20  ">
+            <div class="mix-container">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10 mt-12 sm:mt-20 px-0 sm:px-2">
                     <!-- Projects will be dynamically injected here by main.js -->
                 </div>
             </div>

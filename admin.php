@@ -181,7 +181,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
         <div class="bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalContent">
             
             <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center shrink-0">
-                <h2 class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                <h2 class="text-xl font-bold text-gray-800 flex items-center gap-2" id="modalTitle">
                     <i class="ri-folder-add-fill text-blue-600"></i> Create New Project
                 </h2>
                 <button onclick="closeModal()" class="text-gray-400 hover:text-gray-700 hover:bg-gray-100 p-2 rounded-full transition-colors">
@@ -191,10 +191,11 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
             
             <div class="p-6 overflow-y-auto flex-1">
                 <form id="addProjectForm" class="space-y-5">
+                    <input type="hidden" name="id" id="projectId" value="">
                     <input type="hidden" name="secret" value="<?php echo $secret; ?>">
                     <input type="hidden" name="technologies" id="hiddenTechnologies" value="">
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
                         <div>
                             <label class="block text-sm font-bold text-gray-700 mb-1">Project Title</label>
                             <input type="text" name="title" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all font-medium text-gray-800" placeholder="e.g., E-Commerce App">
@@ -206,6 +207,18 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                                 <option value="category3">Bootstrap</option>
                                 <option value="category2">JavaScript</option>
                                 <option value="category1">HTML & CSS</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Country / Region</label>
+                            <select name="country" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all bg-white font-medium text-gray-800">
+                                <option value="">🌍 Global / None</option>
+                                <option value="assets/flag/egypt.png">🇪🇬 Egypt</option>
+                                <option value="assets/flag/sar.jpg">🇸🇦 Saudi Arabia</option>
+                                <option value="assets/flag/aed.jpg">🇦🇪 UAE</option>
+                                <option value="assets/flag/kwd.jpg">🇰🇼 Kuwait</option>
+                                <option value="assets/flag/qar.jpg">🇶🇦 Qatar</option>
+                                <option value="assets/flag/bhd.jpg">🇧🇭 Bahrain</option>
                             </select>
                         </div>
                     </div>
@@ -271,7 +284,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                                 </div>
                                 <p class="text-xs text-gray-500">PNG, JPG, WEBP up to 5MB</p>
                             </div>
-                            <input id="imageUpload" name="image" type="file" class="sr-only" accept="image/*" required onchange="handleImage(this)">
+                            <input id="imageUpload" name="image" type="file" class="sr-only" accept="image/*" onchange="handleImage(this)">
                         </div>
                     </div>
 
@@ -319,6 +332,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
         function renderTechSelector() {
             const container = document.getElementById('techContainer');
             container.innerHTML = '';
+            document.getElementById('hiddenTechnologies').value = Array.from(selectedTechs).join(', ');
             
             techList.forEach(tech => {
                 const btn = document.createElement('button');
@@ -340,7 +354,6 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                     if (isSelected) selectedTechs.delete(tech.name);
                     else selectedTechs.add(tech.name);
                     renderTechSelector();
-                    document.getElementById('hiddenTechnologies').value = Array.from(selectedTechs).join(', ');
                 };
                 
                 container.appendChild(btn);
@@ -352,7 +365,17 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
         const modal = document.getElementById('projectModal');
         const modalContent = document.getElementById('modalContent');
         
-        function openModal() {
+        function openModal(isEdit = false) {
+            if (!isEdit) {
+                document.getElementById('addProjectForm').reset();
+                document.getElementById('projectId').value = '';
+                document.getElementById('modalTitle').innerHTML = '<i class="ri-folder-add-fill text-blue-600"></i> Create New Project';
+                selectedTechs.clear();
+                renderTechSelector();
+                document.getElementById('imagePreview').classList.add('hidden');
+                document.getElementById('uploadUi').classList.remove('bg-white/90');
+                document.getElementById('uploadUi').classList.add('bg-white/80');
+            }
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             // Trigger reflow
@@ -360,6 +383,39 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
             modal.classList.remove('opacity-0');
             modalContent.classList.remove('scale-95');
             modalContent.classList.add('scale-100');
+        }
+
+        function editProject(id) {
+            const p = allProjects.find(proj => proj.id === id);
+            if (!p) return;
+
+            document.getElementById('projectId').value = p.id;
+            const form = document.getElementById('addProjectForm');
+            form.elements['title'].value = p.title || '';
+            form.elements['category'].value = p.category || '';
+            if (form.elements['country']) form.elements['country'].value = p.country || '';
+            form.elements['githubLink'].value = p.githubLink || '';
+            form.elements['previewLink'].value = p.previewLink || '';
+
+            selectedTechs.clear();
+            if (p.technologies) {
+                p.technologies.forEach(t => selectedTechs.add(t));
+            }
+            renderTechSelector();
+
+            document.getElementById('modalTitle').innerHTML = '<i class="ri-edit-fill text-blue-600"></i> Edit Project';
+            
+            // Show existing image in preview
+            const preview = document.getElementById('imagePreview');
+            const ui = document.getElementById('uploadUi');
+            if (p.image) {
+                preview.src = p.image;
+                preview.classList.remove('hidden');
+                ui.classList.remove('bg-white/80');
+                ui.classList.add('bg-white/90');
+            }
+            
+            openModal(true);
         }
 
         function closeModal() {
@@ -413,11 +469,14 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
             }
         }
 
+        let allProjects = [];
+
         async function loadProjects() {
             const grid = document.getElementById('projectsGrid');
             try {
                 const res = await fetch('api/projects.php');
-                const projects = await res.json();
+                allProjects = await res.json();
+                const projects = allProjects;
                 
                 grid.innerHTML = '';
                 
@@ -439,20 +498,28 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                     const isActive = p.isActive !== false; // default true
                     const isFeatured = p.isFeatured === true;
 
+                    const countryBadge = p.country && p.country !== '' ? `<img src="${p.country}" class="absolute top-3 right-3 w-8 rounded-sm shadow-md z-10 bg-white" alt="Flag">` : '';
+
                     card.innerHTML = `
                         <div class="h-48 overflow-hidden bg-gray-100 relative shrink-0">
+                            ${countryBadge}
                             <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             ${!isActive ? `<div class="absolute inset-0 bg-gray-900/60 backdrop-blur-[2px] flex items-center justify-center"><span class="bg-gray-800 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest"><i class="ri-eye-off-line"></i> Hidden</span></div>` : ''}
                             ${isFeatured ? `<div class="absolute top-3 left-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold shadow-md"><i class="ri-star-fill"></i> Featured</div>` : ''}
                             
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4 z-20">
                                 <div class="flex gap-2">
                                     ${p.githubLink ? `<a href="${p.githubLink}" target="_blank" class="bg-white hover:bg-gray-200 text-black w-8 h-8 rounded-full flex items-center justify-center shadow-md transition-colors"><i class="ri-github-fill"></i></a>` : ''}
                                     ${p.previewLink ? `<a href="${p.previewLink}" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md transition-colors"><i class="ri-external-link-line"></i></a>` : ''}
                                 </div>
-                                <button onclick="deleteProject('${p.id}')" class="bg-red-600 hover:bg-red-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md transition-colors" title="Delete Project">
-                                    <i class="ri-delete-bin-line"></i>
-                                </button>
+                                <div class="flex gap-2">
+                                    <button onclick="editProject('${p.id}')" class="bg-indigo-600 hover:bg-indigo-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md transition-colors" title="Edit Project">
+                                        <i class="ri-edit-line"></i>
+                                    </button>
+                                    <button onclick="deleteProject('${p.id}')" class="bg-red-600 hover:bg-red-700 text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md transition-colors" title="Delete Project">
+                                        <i class="ri-delete-bin-line"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <div class="p-5 flex-1 flex flex-col">
@@ -500,22 +567,34 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
         document.getElementById('addProjectForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            const form = e.target;
+            const projectId = document.getElementById('projectId').value;
+            const imageInput = document.getElementById('imageUpload');
+
+            if (!projectId && (!imageInput.files || imageInput.files.length === 0)) {
+                alert("Please select a project image.");
+                return;
+            }
+
             if (selectedTechs.size === 0) {
                 alert("Please select at least one technology.");
                 return;
             }
 
-            const form = e.target;
             const btn = document.getElementById('submitBtn');
             const status = document.getElementById('statusMsg');
             
             btn.disabled = true;
-            btn.innerHTML = '<i class="ri-loader-4-line animate-spin"></i> Saving...';
+            btn.innerHTML = '<i class="ri-loader-4-line animate-spin text-xl"></i> Saving...';
+            btn.classList.add('opacity-80', 'cursor-not-allowed');
             status.classList.add('hidden');
             
             const formData = new FormData(form);
             
             try {
+                // Artificial delay to show the loading animation for better UX
+                await new Promise(resolve => setTimeout(resolve, 800));
+                
                 const res = await fetch('api/projects.php', {
                     method: 'POST',
                     body: formData
@@ -524,7 +603,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                 const data = await res.json();
                 
                 if (res.ok) {
-                    status.innerHTML = '<i class="ri-checkbox-circle-fill"></i> Project added successfully!';
+                    status.innerHTML = `<i class="ri-checkbox-circle-fill"></i> Project ${projectId ? 'updated' : 'added'} successfully!`;
                     status.className = 'rounded-xl p-4 text-sm font-bold text-center bg-green-50 text-green-700 mb-4 block';
                     
                     setTimeout(() => {
@@ -537,7 +616,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                         closeModal();
                         loadProjects();
                         status.classList.add('hidden');
-                    }, 1500);
+                    }, 600);
                 } else {
                     status.textContent = data.error || 'Error saving project';
                     status.className = 'rounded-xl p-4 text-sm font-bold text-center bg-red-50 text-red-700 mb-4 block';
@@ -548,6 +627,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
             } finally {
                 btn.disabled = false;
                 btn.innerHTML = '<i class="ri-save-3-line"></i> Save Project';
+                btn.classList.remove('opacity-80', 'cursor-not-allowed');
             }
         });
 

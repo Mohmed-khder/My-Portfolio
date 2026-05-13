@@ -243,38 +243,39 @@ async function fetchAndRenderProjects() {
       let techHTML = '';
       p.technologies.forEach((tech, index) => {
           const color = (p.techColors && p.techColors[index]) ? p.techColors[index] : '#333';
-          techHTML += `<li class="px-[15px] lg:px-[20px] py-[8px] mr-1 lg:mr-2 mb-2 rounded-full text-[#fff] font-semibold cursor-pointer text-sm shadow-sm hover:shadow-md transition-all hover:-translate-y-1" style="background-color: ${color}">${tech}</li>`;
+          const textColor = (tech.toLowerCase() === 'javascript' || tech.toLowerCase() === 'firebase') ? '#000' : '#fff';
+          techHTML += `<li class="px-3 py-1.5 sm:px-4 sm:py-2 lg:px-5 lg:py-2.5 rounded-full font-bold cursor-pointer text-[10px] sm:text-xs shadow-sm hover:shadow-md transition-all hover:-translate-y-1" style="background-color: ${color}; color: ${textColor};">${tech}</li>`;
       });
+
+      const countryBadge = p.country && p.country !== '' ? `<img src="${p.country}" class="absolute top-4 right-4 w-10 sm:w-12 lg:w-14 rounded-sm shadow-[0_4px_15px_rgba(0,0,0,0.15)] z-20 transition-transform duration-300 hover:scale-105" alt="Flag">` : '';
 
       const cardHTML = `
         <div class="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.08)] border border-gray-100 hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 mix ${p.category}">
             <!-- Image Section -->
             <div class="relative w-full overflow-hidden cursor-pointer">
+                ${countryBadge}
+                ${p.isFeatured ? `<div class="absolute top-4 left-4 bg-yellow-400 text-yellow-900 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-md z-20"><i class="ri-star-fill"></i> Featured</div>` : ''}
                 <img src="${p.image}" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" alt="${p.title}">
                 <!-- Title Overlay (Visible by default, hides on hover) -->
-                <div class="absolute inset-0 flex items-center justify-center font-bold text-white text-2xl md:text-3xl bg-black/40 opacity-100 group-hover:opacity-0 transition-opacity duration-300 text-center px-4">
+                <div class="absolute inset-0 flex items-center justify-center font-bold text-white text-xl sm:text-2xl md:text-3xl bg-black/40 opacity-100 group-hover:opacity-0 transition-opacity duration-300 text-center px-4 z-10 pointer-events-none">
                     ${p.title}
                 </div>
             </div>
             
             <!-- Content Section -->
-            <div class="flex flex-col p-6 bg-white text-center border-t border-gray-50 flex-1">
+            <div class="flex flex-col p-4 sm:p-6 lg:p-8 bg-white text-center border-t border-gray-50 flex-1">
                 
-                <!-- Project Title (Added to fill space elegantly) -->
-                <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-assent-secondary transition-colors duration-300">${p.title}</h3>
-                
-                <div class="w-12 h-1 bg-assent-secondary mx-auto rounded-full mb-4"></div>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 group-hover:text-assent-secondary transition-colors duration-300">${p.title}</h3>
+                <div class="w-12 sm:w-16 h-1.5 bg-assent-secondary mx-auto rounded-full mb-6"></div>
 
-                <!-- Tech Stack -->
-                <p class="text-xs text-gray-400 uppercase tracking-widest font-bold mb-3">Technologies Used</p>
-                <ul class="flex flex-wrap justify-center mb-6">
+                <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-widest font-bold mb-4">Technologies Used</p>
+                <ul class="flex flex-wrap justify-center mb-6 sm:mb-8 gap-2">
                     ${techHTML}
                 </ul>
                 
-                <!-- Buttons -->
-                <div class="flex justify-center gap-3 mt-auto">
-                    ${p.githubLink ? `<a href="${p.githubLink}" target="_blank" class="px-[20px] py-[12px] lg:px-[25px] lg:py-[15px] bg-white text-[#000] border border-[#ccc] hover:bg-gray-100 shadow-sm transform transition-all duration-300 ease-in-out hover:-translate-y-1 font-bold rounded-full flex items-center gap-2">Github <i class="ri-github-fill text-xl"></i></a>` : ''}
-                    ${p.previewLink ? `<a href="${p.previewLink}" target="_blank" class="px-[20px] py-[12px] lg:px-[25px] lg:py-[15px] bg-[#000] hover:bg-[#222] shadow-lg text-[#fff] transform transition-all duration-300 ease-in-out hover:-translate-y-1 font-bold rounded-full flex items-center gap-2">Preview <i class="ri-eye-fill text-xl"></i></a>` : ''}
+                <div class="flex justify-center gap-2 sm:gap-4 mt-auto">
+                    ${p.githubLink ? `<a href="${p.githubLink}" target="_blank" class="px-3 py-2 sm:px-5 sm:py-3 lg:px-[30px] lg:py-[15px] bg-white text-[#000] border border-[#ccc] hover:bg-gray-100 shadow-sm transform transition-all duration-300 ease-in-out hover:-translate-y-1 font-bold rounded-full flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm lg:text-base">Github <i class="ri-github-fill text-lg sm:text-xl"></i></a>` : ''}
+                    ${p.previewLink ? `<a href="${p.previewLink}" target="_blank" class="px-3 py-2 sm:px-5 sm:py-3 lg:px-[30px] lg:py-[15px] bg-[#000] hover:bg-[#222] shadow-lg text-[#fff] transform transition-all duration-300 ease-in-out hover:-translate-y-1 font-bold rounded-full flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm lg:text-base">Preview <i class="ri-eye-fill text-lg sm:text-xl"></i></a>` : ''}
                 </div>
             </div>
         </div>
@@ -289,3 +290,41 @@ async function fetchAndRenderProjects() {
     container.innerHTML = '<p class="text-center w-full col-span-full text-red-500 font-bold">Failed to load projects.</p>';
   }
 }
+
+// Mobile menu toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuIcon = document.getElementById("menuIcon");
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener("click", function () {
+      const isOpen = !mobileMenu.classList.contains("opacity-0");
+      
+      if (isOpen) {
+        // Close menu
+        mobileMenu.classList.add("opacity-0", "invisible", "scale-95");
+        mobileMenu.classList.remove("opacity-100", "visible", "scale-100");
+        menuIcon.classList.remove("ri-close-line");
+        menuIcon.classList.add("ri-menu-4-line");
+      } else {
+        // Open menu
+        mobileMenu.classList.remove("opacity-0", "invisible", "scale-95");
+        mobileMenu.classList.add("opacity-100", "visible", "scale-100");
+        menuIcon.classList.remove("ri-menu-4-line");
+        menuIcon.classList.add("ri-close-line");
+      }
+    });
+
+    // Close menu when clicking a link
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("opacity-0", "invisible", "scale-95");
+        mobileMenu.classList.remove("opacity-100", "visible", "scale-100");
+        menuIcon.classList.remove("ri-close-line");
+        menuIcon.classList.add("ri-menu-4-line");
+      });
+    });
+  }
+});

@@ -41,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $previewLink = $_POST['previewLink'] ?? '';
     $isActive = isset($_POST['isActive']) && $_POST['isActive'] === 'true';
     $isFeatured = isset($_POST['isFeatured']) && $_POST['isFeatured'] === 'true';
+    $country = $_POST['country'] ?? '';
     
     
     // Parse technologies (comma separated)
@@ -68,6 +69,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $techColors[] = $colorMap[$lowerTech] ?? "#000000";
     }
 
+    $idToEdit = $_POST['id'] ?? '';
+    
+    // Load existing projects first so we can find the project we're editing
+    $projects = [];
+    if (file_exists($dataFile)) {
+        $projects = json_decode(file_get_contents($dataFile), true);
+        if (!is_array($projects)) $projects = [];
+    }
+
+    $existingProject = null;
+    $existingIndex = -1;
+    if ($idToEdit) {
+        foreach ($projects as $index => $p) {
+            if ($p['id'] === $idToEdit) {
+                $existingProject = $p;
+                $existingIndex = $index;
+                break;
+            }
+        }
+        if (!$existingProject) {
+            http_response_code(404);
+            echo json_encode(["error" => "Project to edit not found"]);
+            exit;
+        }
+    }
+
     // Handle image upload
     $imagePath = '';
     if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
@@ -85,38 +112,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
     } else {
-        http_response_code(400);
-        echo json_encode(["error" => "Image is required"]);
-        exit;
+        if ($existingProject) {
+            $imagePath = $existingProject['image']; // Preserve existing image
+        } else {
+            http_response_code(400);
+            echo json_encode(["error" => "Image is required for new projects"]);
+            exit;
+        }
     }
 
-    // Load existing
-    $projects = [];
-    if (file_exists($dataFile)) {
-        $projects = json_decode(file_get_contents($dataFile), true);
-        if (!is_array($projects)) $projects = [];
+    if ($existingProject) {
+        // Update existing project
+        $newProject = [
+            "id" => $existingProject['id'],
+            "title" => $title,
+            "image" => $imagePath,
+            "category" => $category,
+            "technologies" => array_values($techs),
+            "techColors" => $techColors,
+            "githubLink" => $githubLink,
+            "previewLink" => $previewLink,
+            "isActive" => $existingProject['isActive'], // preserve existing
+            "isFeatured" => $existingProject['isFeatured'], // preserve existing
+            "country" => $country
+        ];
+        $projects[$existingIndex] = $newProject;
+    } else {
+        // Generate new ID
+        $maxId = 0;
+        foreach ($projects as $p) {
+            if ((int)$p['id'] > $maxId) $maxId = (int)$p['id'];
+        }
+
+        $newProject = [
+            "id" => (string)($maxId + 1),
+            "title" => $title,
+            "image" => $imagePath,
+            "category" => $category,
+            "technologies" => array_values($techs),
+            "techColors" => $techColors,
+            "githubLink" => $githubLink,
+            "previewLink" => $previewLink,
+            "isActive" => $isActive,
+            "isFeatured" => $isFeatured,
+            "country" => $country
+        ];
+        array_unshift($projects, $newProject); // Add to beginning
     }
-
-    // Generate new ID
-    $maxId = 0;
-    foreach ($projects as $p) {
-        if ((int)$p['id'] > $maxId) $maxId = (int)$p['id'];
-    }
-
-    $newProject = [
-        "id" => (string)($maxId + 1),
-        "title" => $title,
-        "image" => $imagePath,
-        "category" => $category,
-        "technologies" => array_values($techs),
-        "techColors" => $techColors,
-        "githubLink" => $githubLink,
-        "previewLink" => $previewLink,
-        "isActive" => $isActive,
-        "isFeatured" => $isFeatured
-    ];
-
-    array_unshift($projects, $newProject); // Add to beginning
 
     if (file_put_contents($dataFile, json_encode($projects, JSON_PRETTY_PRINT))) {
         echo json_encode(["status" => "success", "project" => $newProject]);

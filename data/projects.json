@@ -1,5 +1,57 @@
 [
     {
+        "id": "27",
+        "title": "Wemisc-Academy",
+        "image": "assets\/img\/projects\/1778919704_Screenshot 2026-05-16 112025.png",
+        "category": "category4",
+        "technologies": [
+            "JavaScript",
+            "React",
+            "Next.js",
+            "Tailwind",
+            "PHP",
+            "CSS"
+        ],
+        "techColors": [
+            "#fed600",
+            "#60d8f1",
+            "#000000",
+            "#39bcf9",
+            "#7377ad",
+            "#264de4"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/academy.wemisc.net\/ar",
+        "isActive": true,
+        "isFeatured": false,
+        "country": "assets\/flag\/egypt.png"
+    },
+    {
+        "id": "26",
+        "title": "Quick-Add",
+        "image": "assets\/img\/projects\/1778919576_quickadd.png",
+        "category": "category4",
+        "technologies": [
+            "JavaScript",
+            "React",
+            "Next.js",
+            "Tailwind",
+            "PHP"
+        ],
+        "techColors": [
+            "#fed600",
+            "#60d8f1",
+            "#000000",
+            "#39bcf9",
+            "#7377ad"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/quick-ad.net\/ar",
+        "isActive": true,
+        "isFeatured": true,
+        "country": "assets\/flag\/egypt.png"
+    },
+    {
         "id": "25",
         "title": "Vortex-Website",
         "image": "assets\/img\/projects\/1778631024_vortex.png",

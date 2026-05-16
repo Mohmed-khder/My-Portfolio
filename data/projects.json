@@ -36,14 +36,16 @@
             "React",
             "Next.js",
             "Tailwind",
-            "PHP"
+            "PHP",
+            "CSS"
         ],
         "techColors": [
             "#fed600",
             "#60d8f1",
             "#000000",
             "#39bcf9",
-            "#7377ad"
+            "#7377ad",
+            "#264de4"
         ],
         "githubLink": "",
         "previewLink": "https:\/\/quick-ad.net\/ar",

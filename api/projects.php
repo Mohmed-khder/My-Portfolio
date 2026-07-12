@@ -41,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $previewLink = $_POST['previewLink'] ?? '';
     $isActive = isset($_POST['isActive']) && $_POST['isActive'] === 'true';
     $isFeatured = isset($_POST['isFeatured']) && $_POST['isFeatured'] === 'true';
+    $isInProgress = isset($_POST['isInProgress']) && $_POST['isInProgress'] === 'true';
+    $hasIssue = isset($_POST['hasIssue']) && $_POST['hasIssue'] === 'true';
     $country = $_POST['country'] ?? '';
     
     
@@ -132,8 +134,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             "techColors" => $techColors,
             "githubLink" => $githubLink,
             "previewLink" => $previewLink,
-            "isActive" => $existingProject['isActive'], // preserve existing
-            "isFeatured" => $existingProject['isFeatured'], // preserve existing
+            "isActive" => $isActive,
+            "isFeatured" => $isFeatured,
+            "isInProgress" => $isInProgress,
+            "hasIssue" => $hasIssue,
             "country" => $country
         ];
         $projects[$existingIndex] = $newProject;
@@ -155,6 +159,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             "previewLink" => $previewLink,
             "isActive" => $isActive,
             "isFeatured" => $isFeatured,
+            "isInProgress" => $isInProgress,
+            "hasIssue" => $hasIssue,
             "country" => $country
         ];
         array_unshift($projects, $newProject); // Add to beginning
@@ -217,7 +223,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
     $field = $input['field'] ?? '';
     $value = $input['value'] ?? false;
     
-    if (!in_array($field, ['isActive', 'isFeatured'])) {
+    if (!in_array($field, ['isActive', 'isFeatured', 'isInProgress', 'hasIssue'])) {
         http_response_code(400);
         echo json_encode(["error" => "Invalid field"]);
         exit;

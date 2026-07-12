@@ -252,7 +252,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                     </div>
 
                     <!-- Toggles -->
-                    <div class="grid grid-cols-2 gap-5 bg-blue-50/50 p-4 rounded-xl border border-blue-100">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 bg-blue-50/50 p-4 rounded-xl border border-blue-100">
                         <div class="flex items-center justify-between">
                             <label class="text-sm font-bold text-gray-700 cursor-pointer" for="isActiveToggle">
                                 <i class="ri-eye-line text-blue-600 mr-1"></i> Active (Visible)
@@ -269,6 +269,24 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                             <div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
                                 <input type="checkbox" name="isFeatured" id="isFeaturedToggle" value="true" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
                                 <label for="isFeaturedToggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label class="text-sm font-bold text-gray-700 cursor-pointer" for="isInProgressToggle">
+                                <i class="ri-tools-fill text-orange-500 mr-1"></i> Under Work
+                            </label>
+                            <div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+                                <input type="checkbox" name="isInProgress" id="isInProgressToggle" value="true" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                                <label for="isInProgressToggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label class="text-sm font-bold text-gray-700 cursor-pointer" for="hasIssueToggle">
+                                <i class="ri-error-warning-fill text-red-500 mr-1"></i> Issue Now
+                            </label>
+                            <div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+                                <input type="checkbox" name="hasIssue" id="hasIssueToggle" value="true" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                                <label for="hasIssueToggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
                             </div>
                         </div>
                     </div>
@@ -396,6 +414,10 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
             if (form.elements['country']) form.elements['country'].value = p.country || '';
             form.elements['githubLink'].value = p.githubLink || '';
             form.elements['previewLink'].value = p.previewLink || '';
+            form.elements['isActive'].checked = p.isActive !== false;
+            form.elements['isFeatured'].checked = p.isFeatured === true;
+            form.elements['isInProgress'].checked = p.isInProgress === true;
+            form.elements['hasIssue'].checked = p.hasIssue === true;
 
             selectedTechs.clear();
             if (p.technologies) {
@@ -497,8 +519,13 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                     
                     const isActive = p.isActive !== false; // default true
                     const isFeatured = p.isFeatured === true;
+                    const isInProgress = p.isInProgress === true;
+                    const hasIssue = p.hasIssue === true;
 
                     const countryBadge = p.country && p.country !== '' ? `<img src="${p.country}" class="absolute top-3 right-3 w-8 rounded-sm shadow-md z-10 bg-white" alt="Flag">` : '';
+                    const statusRibbon = hasIssue
+                        ? `<div class="absolute left-0 right-0 bottom-0 bg-red-600 text-white px-3 py-2 text-xs font-black uppercase tracking-wider text-center z-30"><i class="ri-error-warning-fill"></i> Has Current Issue</div>`
+                        : (isInProgress ? `<div class="absolute left-0 right-0 bottom-0 bg-orange-500 text-white px-3 py-2 text-xs font-black uppercase tracking-wider text-center z-30"><i class="ri-tools-fill"></i> Under Work</div>` : '');
 
                     card.innerHTML = `
                         <div class="h-48 overflow-hidden bg-gray-100 relative shrink-0">
@@ -506,6 +533,7 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                             <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             ${!isActive ? `<div class="absolute inset-0 bg-gray-900/60 backdrop-blur-[2px] flex items-center justify-center"><span class="bg-gray-800 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest"><i class="ri-eye-off-line"></i> Hidden</span></div>` : ''}
                             ${isFeatured ? `<div class="absolute top-3 left-3 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold shadow-md"><i class="ri-star-fill"></i> Featured</div>` : ''}
+                            ${statusRibbon}
                             
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4 z-20">
                                 <div class="flex gap-2">
@@ -534,6 +562,12 @@ $isLoggedIn = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'
                                 </button>
                                 <button onclick="toggleStatus('${p.id}', 'isFeatured', ${isFeatured})" class="flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-bold transition-colors ${isFeatured ? 'bg-yellow-50 text-yellow-700 hover:bg-yellow-100 border border-yellow-200' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 border border-gray-200'}">
                                     <i class="${isFeatured ? 'ri-star-fill' : 'ri-star-line'}"></i> Featured
+                                </button>
+                                <button onclick="toggleStatus('${p.id}', 'isInProgress', ${isInProgress})" class="flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-bold transition-colors ${isInProgress ? 'bg-orange-50 text-orange-700 hover:bg-orange-100 border border-orange-200' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 border border-gray-200'}">
+                                    <i class="${isInProgress ? 'ri-tools-fill' : 'ri-tools-line'}"></i> Work
+                                </button>
+                                <button onclick="toggleStatus('${p.id}', 'hasIssue', ${hasIssue})" class="flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-bold transition-colors ${hasIssue ? 'bg-red-50 text-red-700 hover:bg-red-100 border border-red-200' : 'bg-gray-100 text-gray-600 hover:bg-gray-200 border border-gray-200'}">
+                                    <i class="${hasIssue ? 'ri-error-warning-fill' : 'ri-error-warning-line'}"></i> Issue
                                 </button>
                             </div>
                         </div>

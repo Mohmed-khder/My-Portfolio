@@ -1,5 +1,77 @@
 [
     {
+        "id": "30",
+        "title": "Araknzax",
+        "image": "assets\/img\/projects\/1783838312_Screenshot 2026-07-12 093743.png",
+        "category": "category4",
+        "technologies": [
+            "PHP",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#7377ad",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/arkanzax.com\/",
+        "isActive": true,
+        "isFeatured": true,
+        "country": "assets\/flag\/egypt.png",
+        "hasIssue": false
+    },
+    {
+        "id": "29",
+        "title": "Atlas-Travel",
+        "image": "assets\/img\/projects\/1783837983_Screenshot 2026-07-12 093254.png",
+        "category": "category4",
+        "technologies": [
+            "CSS",
+            "JavaScript",
+            "React",
+            "Tailwind",
+            "PHP"
+        ],
+        "techColors": [
+            "#264de4",
+            "#fed600",
+            "#60d8f1",
+            "#39bcf9",
+            "#7377ad"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/atlastravel-eg.com\/",
+        "isActive": true,
+        "isFeatured": true,
+        "country": "assets\/flag\/egypt.png"
+    },
+    {
+        "id": "28",
+        "title": "dr-bassam alkhouri",
+        "image": "assets\/img\/projects\/1783838052_Screenshot 2026-07-12 093132.png",
+        "category": "category4",
+        "technologies": [
+            "CSS",
+            "JavaScript",
+            "React",
+            "Next.js",
+            "Tailwind",
+            "PHP"
+        ],
+        "techColors": [
+            "#264de4",
+            "#fed600",
+            "#60d8f1",
+            "#000000",
+            "#39bcf9",
+            "#7377ad"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/bassamalkhouri.arkanzax.com\/ar",
+        "isActive": true,
+        "isFeatured": true,
+        "country": "assets\/flag\/aed.jpg"
+    },
+    {
         "id": "27",
         "title": "Wemisc-Academy",
         "image": "assets\/img\/projects\/1778919704_Screenshot 2026-05-16 112025.png",
@@ -374,28 +446,6 @@
         "country": "assets\/flag\/sar.jpg"
     },
     {
-        "id": "8",
-        "title": "EcoSyst Company",
-        "image": "assets\/img\/projects\/EcoComapny.png",
-        "category": "category4",
-        "technologies": [
-            "Vite",
-            "Css",
-            "React",
-            ".net",
-            "Tailwind"
-        ],
-        "techColors": [
-            "#a052f3",
-            "#264de4",
-            "#60d8f1",
-            "#4e2acd",
-            "#39bcf9"
-        ],
-        "githubLink": "",
-        "previewLink": "http:\/\/ecosyst-website.netlify.app"
-    },
-    {
         "id": "9",
         "title": "Arkan Website",
         "image": "assets\/img\/projects\/Arkan.png",
@@ -415,7 +465,8 @@
             "#39bcf9"
         ],
         "githubLink": "",
-        "previewLink": "https:\/\/arkann.netlify.app"
+        "previewLink": "https:\/\/arkann.netlify.app",
+        "hasIssue": true
     },
     {
         "id": "10",
@@ -481,7 +532,8 @@
             "#39bcf9"
         ],
         "githubLink": "",
-        "previewLink": "http:\/\/rento-cars-website.netlify.app\/"
+        "previewLink": "http:\/\/rento-cars-website.netlify.app\/",
+        "hasIssue": true
     },
     {
         "id": "13",
@@ -501,7 +553,9 @@
             "#39bcf9"
         ],
         "githubLink": "",
-        "previewLink": "https:\/\/azeem-portfolioo.netlify.app\/"
+        "previewLink": "https:\/\/azeem-portfolioo.netlify.app\/",
+        "hasIssue": true,
+        "isInProgress": false
     },
     {
         "id": "14",
@@ -521,7 +575,8 @@
             "#39bcf9"
         ],
         "githubLink": "",
-        "previewLink": "https:\/\/bemo2002.github.io\/islamic_clothes\/"
+        "previewLink": "https:\/\/bemo2002.github.io\/islamic_clothes\/",
+        "hasIssue": true
     },
     {
         "id": "15",
@@ -541,7 +596,8 @@
             "#39bcf9"
         ],
         "githubLink": "",
-        "previewLink": "https:\/\/bemo2002.github.io\/National-Egypt\/"
+        "previewLink": "https:\/\/bemo2002.github.io\/National-Egypt\/",
+        "hasIssue": true
     },
     {
         "id": "16",
@@ -562,7 +618,8 @@
         ],
         "githubLink": "",
         "previewLink": "https:\/\/bemo2002.github.io\/Elmoktaper_lab\/",
-        "isActive": true
+        "isActive": true,
+        "hasIssue": true
     },
     {
         "id": "17",
@@ -582,27 +639,8 @@
             "#7511f7"
         ],
         "githubLink": "",
-        "previewLink": "https:\/\/bemo2002.github.io\/Hossam-Hassan\/"
-    },
-    {
-        "id": "18",
-        "title": "Insove Hospital",
-        "image": "assets\/img\/projects\/insove.png",
-        "category": "category4",
-        "technologies": [
-            "Html",
-            "Css",
-            "JavaScript",
-            "Tailwind"
-        ],
-        "techColors": [
-            "#e44d25",
-            "#264de4",
-            "#fed600",
-            "#39bcf9"
-        ],
-        "githubLink": "",
-        "previewLink": "https:\/\/bemo2002.github.io\/project-tailwind\/"
+        "previewLink": "https:\/\/bemo2002.github.io\/Hossam-Hassan\/",
+        "hasIssue": true
     },
     {
         "id": "19",
@@ -622,6 +660,7 @@
             "#7511f7"
         ],
         "githubLink": "",
-        "previewLink": ""
+        "previewLink": "",
+        "hasIssue": true
     }
 ]

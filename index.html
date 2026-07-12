@@ -315,45 +315,63 @@
         </section>
         <!-- end resume -->
         <!-- start projects -->
-        <section class="pt-24 pb-24 bg-gray-50" id="projects">
-            <div class="w-[95%] md:w-[85%] xl:max-w-[1500px] mx-auto px-2 sm:px-4">
-                <div class="text-center mb-12">
-                    <h2 class="text-assent-secondary text-sm font-bold tracking-widest uppercase mb-2">My Portfolio</h2>
-                    <h1 class="text-[40px] lg:text-[48px] font-black text-gray-900 leading-tight">Featured Projects</h1>
+        <section class="pt-24 pb-24 bg-[#f7f5f2]" id="projects">
+            <div class="w-[92%] md:w-[86%] xl:max-w-[1460px] mx-auto">
+                <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-10">
+                    <div class="max-w-3xl">
+                        <h2 class="text-assent-secondary text-sm font-bold tracking-widest uppercase mb-3">Selected Work</h2>
+                        <h1 class="text-[38px] lg:text-[52px] font-black text-gray-950 leading-tight">Projects Built For Real Users</h1>
+                        <p class="mt-4 text-gray-600 text-base sm:text-lg leading-8 max-w-2xl">A curated gallery of responsive websites, dashboards, and React experiences with clean interfaces and production-ready details.</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-3 text-center">
+                        <div class="bg-white border border-gray-200 px-4 py-3 shadow-sm">
+                            <span class="block text-2xl font-black text-gray-950">30+</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Projects</span>
+                        </div>
+                        <div class="bg-white border border-gray-200 px-4 py-3 shadow-sm">
+                            <span class="block text-2xl font-black text-gray-950">5</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Markets</span>
+                        </div>
+                        <div class="bg-white border border-gray-200 px-4 py-3 shadow-sm">
+                            <span class="block text-2xl font-black text-gray-950">100%</span>
+                            <span class="text-[11px] font-bold uppercase tracking-wider text-gray-500">Responsive</span>
+                        </div>
+                    </div>
                 </div>
-            <div class="filter text-center ">
-                <div class="flex justify-center text-center  ">
+            <div class="filter">
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3 bg-white border border-gray-200 p-2 shadow-sm w-fit max-w-full">
 
                     <button
-                        class="filter-btn px-[10px] py-[5px] lg:px-[20px] lg:py-[15px] bg-assent-secondary text-[#fff] mr-1 lg:mr-2 font-semibold rounded-full"
+                        class="filter-btn active min-h-11 px-4 sm:px-5 bg-gray-950 text-white border border-gray-950 font-bold text-sm transition-all duration-300 flex items-center gap-2"
                         data-filter="all">
-                        <i class="ri-equalizer-fill text-xl"></i>
+                        <i class="ri-apps-2-line text-lg"></i>
+                        All
                     </button>
 
                     <button
-                        class="filter-btn px-[10px] py-[5px] lg:px-[20px] lg:py-[15px] bg-assent-secondary text-[#fff] mr-1 lg:mr-2 font-semibold rounded-lg"
+                        class="filter-btn min-h-11 px-4 sm:px-5 bg-white text-gray-700 border border-gray-200 hover:border-assent-secondary hover:text-assent-secondary font-bold text-sm transition-all duration-300"
                         data-filter=".category1">
-                        Html&css
+                        HTML & CSS
                     </button>
                     <button
-                        class=" filter-btn px-[10px] py-[5px] lg:px-[20px] lg:py-[15px] bg-assent-secondary text-[#fff] mr-1 lg:mr-2 font-semibold rounded-lg"
+                        class="filter-btn min-h-11 px-4 sm:px-5 bg-white text-gray-700 border border-gray-200 hover:border-assent-secondary hover:text-assent-secondary font-bold text-sm transition-all duration-300"
                         data-filter=".category2">
-                        Js
+                        JavaScript
                     </button>
                     <button
-                        class="filter-btn  px-[10px] py-[5px] lg:px-[20px] lg:py-[15px] bg-assent-secondary text-[#fff] mr-1 lg:mr-2 font-semibold rounded-lg"
+                        class="filter-btn min-h-11 px-4 sm:px-5 bg-white text-gray-700 border border-gray-200 hover:border-assent-secondary hover:text-assent-secondary font-bold text-sm transition-all duration-300"
                         data-filter=".category3">
                         Bootstrap
                     </button>
                     <button
-                        class="filter-btn  px-[10px] py-[5px] lg:px-[20px] lg:py-[15px] bg-assent-secondary text-[#fff] mr-1 lg:mr-2 font-semibold rounded-lg"
+                        class="filter-btn min-h-11 px-4 sm:px-5 bg-white text-gray-700 border border-gray-200 hover:border-assent-secondary hover:text-assent-secondary font-bold text-sm transition-all duration-300"
                         data-filter=".category4">
                         React
                     </button>
                 </div>
             </div>
             <div class="mix-container">
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10 mt-12 sm:mt-20 px-0 sm:px-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 mt-10">
                     <!-- Projects will be dynamically injected here by main.js -->
                 </div>
             </div>

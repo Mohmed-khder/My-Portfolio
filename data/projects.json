@@ -1,5 +1,28 @@
 [
     {
+        "id": "31",
+        "title": "ZBOM-E-commerce",
+        "image": "assets\/img\/projects\/1784503459_Screenshot 2026-07-20 022258.png",
+        "category": "category4",
+        "technologies": [
+            "PHP",
+            "Tailwind",
+            "Sass"
+        ],
+        "techColors": [
+            "#7377ad",
+            "#39bcf9",
+            "#000000"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/site80458-xwxfhw.scloudsite101.com\/home",
+        "isActive": true,
+        "isFeatured": true,
+        "isInProgress": false,
+        "hasIssue": false,
+        "country": "assets\/flag\/sar.jpg"
+    },
+    {
         "id": "30",
         "title": "Araknzax",
         "image": "assets\/img\/projects\/1783838312_Screenshot 2026-07-12 093743.png",

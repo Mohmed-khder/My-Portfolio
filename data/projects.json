@@ -1,5 +1,30 @@
 [
     {
+        "id": "32",
+        "title": "Rehltna-Travel",
+        "image": "assets\/img\/projects\/1785138527_Screenshot 2026-07-27 104605.png",
+        "category": "category4",
+        "technologies": [
+            "JavaScript",
+            "React",
+            "Next.js",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#fed600",
+            "#60d8f1",
+            "#000000",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/rehltna.com\/trips",
+        "isActive": true,
+        "isFeatured": false,
+        "isInProgress": false,
+        "hasIssue": false,
+        "country": "assets\/flag\/sar.jpg"
+    },
+    {
         "id": "31",
         "title": "ZBOM-E-commerce",
         "image": "assets\/img\/projects\/1784503459_Screenshot 2026-07-20 022258.png",

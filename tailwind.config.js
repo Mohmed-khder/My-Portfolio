@@ -16,12 +16,12 @@ module.exports = {
     },
     extend: {
       colors :{
-        primary : '#242a2b',
+        primary : '#00000',
         secondary : '#808080',
         assent : {
-          DEFAULT : '#d39f6f',
-          secondary : '#84540f',
-          tertiary : '#90c6cd'
+          DEFAULT : '#f96b00',
+          secondary : '#f96b00',
+          tertiary : '#000000'
         },
         grey : '#e8f0f1',
       },

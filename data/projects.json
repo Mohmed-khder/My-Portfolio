@@ -1,5 +1,32 @@
 [
     {
+        "id": "36",
+        "title": "Red Sea Sun & Sky",
+        "image": "assets\/img\/projects\/1789649710_Screenshot 2026-09-17 155249.png",
+        "category": "category4",
+        "technologies": [
+            "Next.js",
+            "React",
+            "JavaScript",
+            "CSS",
+            "Tailwind"
+        ],
+        "techColors": [
+            "#000000",
+            "#60d8f1",
+            "#fed600",
+            "#264de4",
+            "#39bcf9"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/rssunsky.com\/en",
+        "isActive": true,
+        "isFeatured": true,
+        "isInProgress": false,
+        "hasIssue": false,
+        "country": ""
+    },
+    {
         "id": "35",
         "title": "Still-United",
         "image": "assets\/img\/projects\/1787090495_Screenshot 2026-08-19 010125.png",

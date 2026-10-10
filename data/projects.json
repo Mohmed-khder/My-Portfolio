@@ -1,5 +1,34 @@
 [
     {
+        "id": "37",
+        "title": "Bailleul Arabia",
+        "image": "assets\/img\/projects\/1791634855_bauil.png",
+        "category": "category4",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Tailwind",
+            "Vite"
+        ],
+        "techColors": [
+            "#e44d25",
+            "#264de4",
+            "#fed600",
+            "#60d8f1",
+            "#39bcf9",
+            "#a052f3"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/bailleularabia.wemisc.net\/",
+        "isActive": true,
+        "isFeatured": true,
+        "isInProgress": false,
+        "hasIssue": false,
+        "country": "assets\/flag\/sar.jpg"
+    },
+    {
         "id": "36",
         "title": "Red Sea Sun & Sky",
         "image": "assets\/img\/projects\/1789649710_Screenshot 2026-09-17 155249.png",
@@ -23,7 +52,7 @@
         "isActive": true,
         "isFeatured": true,
         "isInProgress": false,
-        "hasIssue": false,
+        "hasIssue": true,
         "country": ""
     },
     {

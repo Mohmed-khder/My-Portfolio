@@ -1,5 +1,34 @@
 [
     {
+        "id": "39",
+        "title": "inshape-Reservation",
+        "image": "assets\/img\/projects\/1792586107_inshape.png",
+        "category": "category4",
+        "technologies": [
+            "React",
+            "Tailwind",
+            "TypeScript",
+            "CSS",
+            "Next.js",
+            "JavaScript"
+        ],
+        "techColors": [
+            "#60d8f1",
+            "#39bcf9",
+            "#000000",
+            "#264de4",
+            "#000000",
+            "#fed600"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/inshape-reservation.wemisc.net\/ar",
+        "isActive": true,
+        "isFeatured": false,
+        "isInProgress": false,
+        "hasIssue": false,
+        "country": "assets\/flag\/egypt.png"
+    },
+    {
         "id": "38",
         "title": "Bunyan Consultant",
         "image": "assets\/img\/projects\/1791635835_buyan.png",
@@ -499,7 +528,8 @@
         "previewLink": "https:\/\/site36535-aeutcg.scloudsite101.com\/",
         "isActive": null,
         "isFeatured": null,
-        "country": "assets\/flag\/egypt.png"
+        "country": "assets\/flag\/egypt.png",
+        "isInProgress": true
     },
     {
         "id": "2",

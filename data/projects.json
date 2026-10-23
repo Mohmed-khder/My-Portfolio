@@ -1,5 +1,34 @@
 [
     {
+        "id": "40",
+        "title": "B-M Website",
+        "image": "assets\/img\/projects\/1792759441_b-m.png",
+        "category": "category4",
+        "technologies": [
+            "CSS",
+            "JavaScript",
+            "React",
+            "Next.js",
+            "Tailwind",
+            "TypeScript"
+        ],
+        "techColors": [
+            "#264de4",
+            "#fed600",
+            "#60d8f1",
+            "#000000",
+            "#39bcf9",
+            "#000000"
+        ],
+        "githubLink": "",
+        "previewLink": "https:\/\/bm-ind.com\/en",
+        "isActive": true,
+        "isFeatured": true,
+        "isInProgress": false,
+        "hasIssue": false,
+        "country": "assets\/flag\/egypt.png"
+    },
+    {
         "id": "39",
         "title": "inshape-Reservation",
         "image": "assets\/img\/projects\/1792586107_inshape.png",
@@ -83,33 +112,6 @@
         "isInProgress": false,
         "hasIssue": false,
         "country": "assets\/flag\/sar.jpg"
-    },
-    {
-        "id": "36",
-        "title": "Red Sea Sun & Sky",
-        "image": "assets\/img\/projects\/1789649710_Screenshot 2026-09-17 155249.png",
-        "category": "category4",
-        "technologies": [
-            "Next.js",
-            "React",
-            "JavaScript",
-            "CSS",
-            "Tailwind"
-        ],
-        "techColors": [
-            "#000000",
-            "#60d8f1",
-            "#fed600",
-            "#264de4",
-            "#39bcf9"
-        ],
-        "githubLink": "",
-        "previewLink": "https:\/\/rssunsky.com\/en",
-        "isActive": true,
-        "isFeatured": true,
-        "isInProgress": false,
-        "hasIssue": true,
-        "country": ""
     },
     {
         "id": "35",

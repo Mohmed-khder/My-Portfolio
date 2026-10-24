@@ -32,14 +32,26 @@
 </head>
 
 <body class="overflow-x-hidden relative">
-    <div id="loading">
-        <div class="flex items-center justify-center h-screen">
-            <div class="loader-tailwind relative w-[100px] h-[45px]">
-                <div class="loader-tailwind-before absolute inset-0 bg-black shadow-[0_0_0_50px]"></div>
-                <div
-                    class="loader-tailwind-after absolute inset-0 bg-black shadow-[0_0_0_50px] animate-loader-tailwind">
-                </div>
+    <div id="loading" class="fixed inset-0 z-[9999] bg-[#212121] overflow-hidden">
+        <!-- From Uiverse.io by anand_4957 --> 
+        <div class="clouds">
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+            <div class="cloud cloud3"></div>
+            <div class="cloud cloud4"></div>
+            <div class="cloud cloud5"></div>
+        </div>
+
+        <div class="loader">
+            <span><span></span><span></span><span></span><span></span></span>
+            <div class="base">
+                <span></span>
+                <div class="face"></div>
             </div>
+        </div>
+
+        <div class="longfazers">
+            <span></span><span></span><span></span><span></span>
         </div>
     </div>
     <div id="data" class="hidden">

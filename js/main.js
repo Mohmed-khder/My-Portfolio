@@ -327,40 +327,108 @@ async function fetchAndRenderProjects() {
   }
 }
 
-// Mobile menu toggle
+// Floating Island Navbar & Mobile Menu
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   const menuIcon = document.getElementById("menuIcon");
   const mobileLinks = document.querySelectorAll(".mobile-link");
+  const navbarPill = document.getElementById("navbarPill");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Mobile menu open / close helper
+  function closeMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.add("opacity-0", "invisible", "scale-95");
+    mobileMenu.classList.remove("opacity-100", "visible", "scale-100");
+    if (menuIcon) {
+      menuIcon.classList.remove("ri-close-line");
+      menuIcon.classList.add("ri-menu-4-line");
+    }
+  }
+
+  function openMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove("opacity-0", "invisible", "scale-95");
+    mobileMenu.classList.add("opacity-100", "visible", "scale-100");
+    if (menuIcon) {
+      menuIcon.classList.remove("ri-menu-4-line");
+      menuIcon.classList.add("ri-close-line");
+    }
+  }
 
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", function () {
+    mobileMenuBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
       const isOpen = !mobileMenu.classList.contains("opacity-0");
-      
       if (isOpen) {
-        // Close menu
-        mobileMenu.classList.add("opacity-0", "invisible", "scale-95");
-        mobileMenu.classList.remove("opacity-100", "visible", "scale-100");
-        menuIcon.classList.remove("ri-close-line");
-        menuIcon.classList.add("ri-menu-4-line");
+        closeMobileMenu();
       } else {
-        // Open menu
-        mobileMenu.classList.remove("opacity-0", "invisible", "scale-95");
-        mobileMenu.classList.add("opacity-100", "visible", "scale-100");
-        menuIcon.classList.remove("ri-menu-4-line");
-        menuIcon.classList.add("ri-close-line");
+        openMobileMenu();
       }
     });
 
     // Close menu when clicking a link
-    mobileLinks.forEach(link => {
+    mobileLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        mobileMenu.classList.add("opacity-0", "invisible", "scale-95");
-        mobileMenu.classList.remove("opacity-100", "visible", "scale-100");
-        menuIcon.classList.remove("ri-close-line");
-        menuIcon.classList.add("ri-menu-4-line");
+        closeMobileMenu();
       });
     });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        closeMobileMenu();
+      }
+    });
   }
+
+  // Scrollspy & Navbar Pill elevation on scroll
+  const sections = document.querySelectorAll("section[id]");
+
+  function handleNavbarScroll() {
+    const scrollY = window.scrollY;
+
+    // Navbar pill elevation
+    if (navbarPill) {
+      if (scrollY > 40) {
+        navbarPill.classList.add("bg-white/95", "shadow-[0_12px_40px_rgba(0,0,0,0.1)]", "border-gray-200/80");
+        navbarPill.classList.remove("bg-white/80", "shadow-[0_8px_30px_rgb(0,0,0,0.06)]", "border-white/80");
+      } else {
+        navbarPill.classList.remove("bg-white/95", "shadow-[0_12px_40px_rgba(0,0,0,0.1)]", "border-gray-200/80");
+        navbarPill.classList.add("bg-white/80", "shadow-[0_8px_30px_rgb(0,0,0,0.06)]", "border-white/80");
+      }
+    }
+
+    // Scrollspy section detection
+    let currentSectionId = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 140;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        currentSectionId = section.getAttribute("id");
+      }
+    });
+
+    if (currentSectionId && navLinks.length > 0) {
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (href === `#${currentSectionId}`) {
+          link.classList.add("active-nav");
+        } else {
+          link.classList.remove("active-nav");
+        }
+      });
+    }
+  }
+
+  window.addEventListener("scroll", handleNavbarScroll, { passive: true });
+  handleNavbarScroll();
 });

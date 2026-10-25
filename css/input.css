@@ -44,6 +44,14 @@
   transform: translateY(0);
 }
 
+/* Floating Island Navbar */
+.nav-link.active-nav {
+  background-color: #ffffff;
+  color: #111827;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+}
+
 
 
 
